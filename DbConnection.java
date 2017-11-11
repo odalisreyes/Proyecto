@@ -54,7 +54,7 @@ public class DbConnection {
 	 */
 	public void Save(Usuario a) {
 		arjona.save(a); 
-		}
+	}
 	
 	
 	/**
@@ -65,7 +65,7 @@ public class DbConnection {
 		Query<Usuario> consulta = arjona.createQuery(Usuario.class);
 		usuarios = consulta.asList();
 		return usuarios;
-		}
+	}
 			
 			
 		

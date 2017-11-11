@@ -64,11 +64,12 @@ public class Main {
 		
 		JLabel iOrder = new JLabel("iOrder");
 		iOrder.setHorizontalAlignment(SwingConstants.CENTER);
-		iOrder.setFont(new Font("Lucida Grande", Font.BOLD, 20));
+		iOrder.setFont(new Font("Calibri", Font.BOLD, 22));
 		iOrder.setBounds(6, 38, 438, 26);
 		frame.getContentPane().add(iOrder);
 		
 		JLabel lblNombreDeUsuario = new JLabel("Nombre de usuario:");
+		lblNombreDeUsuario.setFont(new Font("Calibri", Font.PLAIN, 14));
 		lblNombreDeUsuario.setBounds(134, 94, 135, 16);
 		frame.getContentPane().add(lblNombreDeUsuario);
 		
@@ -79,6 +80,7 @@ public class Main {
 		UsuarioTF.setColumns(10);
 
 		JLabel lblContrasea = new JLabel("Contraseña:");
+		lblContrasea.setFont(new Font("Calibri", Font.PLAIN, 14));
 		lblContrasea.setBounds(134, 150, 135, 16);
 		frame.getContentPane().add(lblContrasea);
 		
@@ -89,29 +91,19 @@ public class Main {
 		
 		/* Boton para crear cuenta */
 		JButton CrearB = new JButton("Crear cuenta");
+		CrearB.setFont(new Font("Calibri", Font.PLAIN, 14));
 		CrearB.setBounds(123, 223, 114, 29);
 		frame.getContentPane().add(CrearB);
 		
 		/* Boton para ingresar al iOrder */
 		JButton IngresarB = new JButton("Ingresar");
+		IngresarB.setFont(new Font("Calibri", Font.PLAIN, 14));
 		IngresarB.setBounds(238, 223, 89, 29);
 		frame.getContentPane().add(IngresarB);
 		
 		
 		
-		/*
-		 * ActionListener para el boton "Ingresar"
-		 */
-		IngresarB.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				if (UsuarioTF.getText().equals(" ")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar un nombre de usuario"); }
-				
-				else if (PasswordTF.equals(" ")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar una contraseña"); } }
-			});
-
-
+		
 	}
 	
 	
