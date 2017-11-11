@@ -7,6 +7,9 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
+
+import GUI.Second;
+
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
@@ -18,7 +21,7 @@ import javax.swing.JButton;
  * @author Odalis Reyes   17032
  * @author Ivan Maldonado 17211
  * 
- * @file Principal.java
+ * @file Main.java
  * @since 10/11/17
  */
 public class Main {
@@ -64,17 +67,18 @@ public class Main {
 		
 		JLabel iOrder = new JLabel("iOrder");
 		iOrder.setHorizontalAlignment(SwingConstants.CENTER);
-		iOrder.setFont(new Font("Calibri", Font.BOLD, 22));
+		iOrder.setFont(new Font("Calibri", Font.BOLD, 23));
 		iOrder.setBounds(6, 38, 438, 26);
 		frame.getContentPane().add(iOrder);
 		
 		JLabel lblNombreDeUsuario = new JLabel("Nombre de usuario:");
 		lblNombreDeUsuario.setFont(new Font("Calibri", Font.PLAIN, 14));
-		lblNombreDeUsuario.setBounds(134, 94, 135, 16);
+		lblNombreDeUsuario.setBounds(134, 91, 135, 16);
 		frame.getContentPane().add(lblNombreDeUsuario);
 		
 		/* TextField para ingresar el usuario */
 		UsuarioTF = new JTextField();
+		UsuarioTF.setFont(new Font("Calibri", Font.PLAIN, 14));
 		UsuarioTF.setBounds(126, 111, 201, 26);
 		frame.getContentPane().add(UsuarioTF);
 		UsuarioTF.setColumns(10);
@@ -86,6 +90,7 @@ public class Main {
 		
 		/* TextField para ingresar la contraseña */
 		PasswordTF = new JPasswordField();
+		PasswordTF.setFont(new Font("Calibri", Font.PLAIN, 14));
 		PasswordTF.setBounds(126, 168, 201, 26);
 		frame.getContentPane().add(PasswordTF);
 		
@@ -102,9 +107,17 @@ public class Main {
 		frame.getContentPane().add(IngresarB);
 		
 		
+		CrearB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Second CrearTF = new Second();
+				CrearTF.setVisible(true);
+			}
+		});
 		
 		
 	}
+
+
 	
 	
 	
