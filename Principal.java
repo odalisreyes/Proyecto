@@ -1,20 +1,16 @@
+public class Principal{
+	
+	/*
+	 * package Clases;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.swing.plaf.synth.SynthSpinnerUI;
 
-/*
- * *Esta clase interactúa con el usuario. 
- *@Authors: Oliver Graf  17190
- * Iván Maldonado 17211
- * Mayra Silva 17276
- * Odalis Reyes 17032
- * @File name: Principal.java
- * @Date and Project: Proyecto final de POO (28/09/2017)
- */
 
 public class Principal {
-	//Importación de la clase scanner para poder interactuar con el usuario
+	//Importaciï¿½n de la clase scanner para poder interactuar con el usuario
 	static Scanner scanner = new Scanner(System.in);
 	//Declaracion de variables
 	static Arrusuarios arreglo = new Arrusuarios();
@@ -33,8 +29,8 @@ public class Principal {
 			System.out.println("3. Salir");
 			String opcion0 = scanner.next();
 			while (error.evaluarInt(opcion0, 4) == false) {
-				System.out.println("Error 1001, debe ingresar un número válido.");
-				System.out.println("Inténtelo de nuevo");
+				System.out.println("Error 1001, debe ingresar un nï¿½mero vï¿½lido.");
+				System.out.println("Intï¿½ntelo de nuevo");
 				opcion0 = scanner.next();
 			}
 			opcion = Integer.parseInt(opcion0);
@@ -44,11 +40,11 @@ public class Principal {
 				System.out.println("Ingrese el nombre de usuario");
 				String username = scanner.next();
 				if (arreglo.getMap().containsKey(username)) {
-					System.out.println("Éxito.");
+					System.out.println("ï¿½xito.");
 					int activo = 0;
 					
 					while(activo == 0) {
-						System.out.println("Ingrese el número del menú que quiere abrir: ");
+						System.out.println("Ingrese el nï¿½mero del menï¿½ que quiere abrir: ");
 						System.out.println("1. McDonnald's");
 						System.out.println("2. Burger King");
 						System.out.println("3. Dominos");
@@ -66,19 +62,19 @@ public class Principal {
 							while (continuo.equals("si")) {
 								
 								Orden orden = new Orden();
-							System.out.println("Ingrese el número del alimento que desea");
+							System.out.println("Ingrese el nï¿½mero del alimento que desea");
 							String comida0 = scanner.next();
 							while (error.evaluarInt(comida0, 81) == false) {
-								System.out.println("Error 1001, debe ingresar un número válido.");
-								System.out.println("Inténtelo de nuevo");
+								System.out.println("Error 1001, debe ingresar un nï¿½mero vï¿½lido.");
+								System.out.println("Intï¿½ntelo de nuevo");
 								comida0 = scanner.next();
 							}
 							int comida1 = Integer.parseInt(comida0);
 							orden.setComida(matriz.getObj(0, comida1));
-							System.out.println("¿Cuánt@s quiere? Ingrese la cantidad que desea (MAX 99)");
+							System.out.println("ï¿½Cuï¿½nt@s quiere? Ingrese la cantidad que desea (MAX 99)");
 							String cant0 = scanner.next();
 							while(error.evaluarInt(cant0, 100) == false) {
-								System.out.println("Error 1001, debe ingresar un número válido.");
+								System.out.println("Error 1001, debe ingresar un nï¿½mero vï¿½lido.");
 								System.out.println("Intentelo de nuevo");
 								cant0 = scanner.next();
 							}
@@ -87,11 +83,11 @@ public class Principal {
 							int precio = Integer.parseInt(matriz.getObj(1, comida1));
 							orden.setPrecio(precio);
 							arreglo.addcomida(orden);
-							System.out.println("¿Desea agreagar algo más a su orden?(si/no)");
+							System.out.println("ï¿½Desea agreagar algo mï¿½s a su orden?(si/no)");
 							continuo = scanner.next();
 							while(continuo.equals("si") == false && continuo.equals("no")==false ) {
 								System.out.println("Error 1003, debe ingresar si o no");
-								System.out.println("Inténtelo de nuevo");
+								System.out.println("Intï¿½ntelo de nuevo");
 								continuo = scanner.next();
 							}
 							}
@@ -108,20 +104,20 @@ public class Principal {
 							while (continuo.equals("si")) {
 								
 								Orden orden = new Orden();
-							System.out.println("Ingrese el número del alimento que desea");
+							System.out.println("Ingrese el nï¿½mero del alimento que desea");
 							String comida0 = scanner.next();
 							while (error.evaluarInt(comida0, 64) == false) {
-								System.out.println("Error 1001, debe ingresar un número válido.");
-								System.out.println("Inténtelo de nuevo");
+								System.out.println("Error 1001, debe ingresar un nï¿½mero vï¿½lido.");
+								System.out.println("Intï¿½ntelo de nuevo");
 								comida0 = scanner.next();
 							}
 							int comida1 = Integer.parseInt(comida0);
 							orden.setComida(matriz.getObj(2, comida1));
-							System.out.println("¿Cuánt@s quiere? Ingrese la cantidad que desea (MAX 99)");
+							System.out.println("ï¿½Cuï¿½nt@s quiere? Ingrese la cantidad que desea (MAX 99)");
 							String cant0 = scanner.next();
 							while(error.evaluarInt(cant0, 100) == false) {
-								System.out.println("Error 1001, debe ingresar un número válido.");
-								System.out.println("Inténtelo de nuevo");
+								System.out.println("Error 1001, debe ingresar un nï¿½mero vï¿½lido.");
+								System.out.println("Intï¿½ntelo de nuevo");
 								cant0 = scanner.next();
 							}
 							int cant = Integer.parseInt(cant0);
@@ -129,11 +125,11 @@ public class Principal {
 							int precio = Integer.parseInt(matriz.getObj(3, comida1));
 							orden.setPrecio(precio);
 							arreglo.addcomida(orden);
-							System.out.println("¿Desea agregar algo más a su orden?(si/no)");
+							System.out.println("ï¿½Desea agregar algo mï¿½s a su orden?(si/no)");
 							continuo = scanner.next();
 							while(continuo.equals("si") == false && continuo.equals("no")==false ) {
 								System.out.println("Error 1003, debe ingresar si o no");
-								System.out.println("Inténtelo de nuevo");
+								System.out.println("Intï¿½ntelo de nuevo");
 								continuo = scanner.next();
 							}
 							
@@ -150,20 +146,20 @@ public class Principal {
 							while (continuo.equals("si")) {
 								
 								Orden orden = new Orden();
-							System.out.println("Ingrese el número del alimento que desea");
+							System.out.println("Ingrese el nï¿½mero del alimento que desea");
 							String comida0 = scanner.next();
 							while (error.evaluarInt(comida0, 43) == false) {
-								System.out.println("Error 1001, debe ingresar un número válido.");
-								System.out.println("Inténtelo de nuevo");
+								System.out.println("Error 1001, debe ingresar un nï¿½mero vï¿½lido.");
+								System.out.println("Intï¿½ntelo de nuevo");
 								comida0 = scanner.next();
 							}
 							int comida1 = Integer.parseInt(comida0);
 							orden.setComida(matriz.getObj(4, comida1));
-							System.out.println("¿Cuánt@s quiere? Ingrese la cantidad que desea (MAX 99)");
+							System.out.println("ï¿½Cuï¿½nt@s quiere? Ingrese la cantidad que desea (MAX 99)");
 							String cant0 = scanner.next();
 							while(error.evaluarInt(cant0, 100) == false) {
-								System.out.println("Error 1001, debe ingresar un número válido.");
-								System.out.println("Inténtelo de nuevo");
+								System.out.println("Error 1001, debe ingresar un nï¿½mero vï¿½lido.");
+								System.out.println("Intï¿½ntelo de nuevo");
 								cant0 = scanner.next();
 							}
 							int cant = Integer.parseInt(cant0);
@@ -171,11 +167,11 @@ public class Principal {
 							int precio = Integer.parseInt(matriz.getObj(5, comida1));
 							orden.setPrecio(precio);
 							arreglo.addcomida(orden);
-							System.out.println("¿Desea agregar algo más a su orden?(si/no)");
+							System.out.println("ï¿½Desea agregar algo mï¿½s a su orden?(si/no)");
 							continuo = scanner.next();
 							while(continuo.equals("si") == false && continuo.equals("no")==false ) {
 								System.out.println("Error 1003, debe ingresar si o no");
-								System.out.println("Inténtelo de nuevo");
+								System.out.println("Intï¿½ntelo de nuevo");
 								continuo = scanner.next();
 							}
 							
@@ -204,7 +200,7 @@ public class Principal {
 				break;
 				
 			default:
-				System.out.println("Cerrando programa.¡Adiós!");
+				System.out.println("Cerrando programa.ï¿½Adiï¿½s!");
 				System.exit(0);
 				break;
 			}
@@ -217,17 +213,17 @@ public class Principal {
 //			scanner.nextLine();
 			String nombre = scanner.next();
 			while (arreglo.getMap().containsKey(nombre) == true) {
-				System.out.println("Error 1002, el nombre de usuario que ingresó ya existe. Elija otro.");
+				System.out.println("Error 1002, el nombre de usuario que ingresï¿½ ya existe. Elija otro.");
 				nombre = scanner.next();
 			}
 			usuario.setNombre(nombre);
-			System.out.println("Ingrese el número de su tarjeta de crédito");
+			System.out.println("Ingrese el nï¿½mero de su tarjeta de crï¿½dito");
 			int tarjeta = scanner.nextInt();
 			usuario.setTarjeta(tarjeta);
-			System.out.println("Ingrese el cvv de su tarjeta (el código de seguridad)");
+			System.out.println("Ingrese el cvv de su tarjeta (el cï¿½digo de seguridad)");
 			int cvv  = scanner.nextInt();
 			usuario.setCvv(cvv);
-			System.out.println("Ingrese la fecha de expiración de la tarjeta. Para esto ingrese los cuatro números en orden (xx/xx)");
+			System.out.println("Ingrese la fecha de expiraciï¿½n de la tarjeta. Para esto ingrese los cuatro nï¿½meros en orden (xx/xx)");
 			String fechaExp = scanner.next();
 			usuario.setFechaExp(fechaExp);
 			System.out.println("Ingrese la placa de su carro");
@@ -236,13 +232,13 @@ public class Principal {
 			System.out.println("Ingrese el color de su carro");
 			String color = scanner.next();
 			usuario.setColor(color);
-			System.out.println("Ingrese el año en el el modelo de su carro");
+			System.out.println("Ingrese el aï¿½o en el el modelo de su carro");
 			int modelo = scanner.nextInt();
 			usuario.setModelo(modelo);
-			System.out.println("Ingrese la línea de su carro");
+			System.out.println("Ingrese la lï¿½nea de su carro");
 			String linea = scanner.next();
 			usuario.setLinea(linea);
-			System.out.println("Ingrese la marca de su carro (este es el último paso)");
+			System.out.println("Ingrese la marca de su carro (este es el ï¿½ltimo paso)");
 			String marca = scanner.next();
 			usuario.setMarca(marca);
 			
@@ -258,8 +254,7 @@ public class Principal {
 		
 		
 	}
+	 */
 	
-	
-	
-
+}
 

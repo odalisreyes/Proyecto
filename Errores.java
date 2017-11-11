@@ -1,16 +1,14 @@
-/*
- *
+
+/** 
  * Esta clase tiene como objetivo crear los métodos necesarios para los posibles errores dentro del programa. 
  * 
- * @Authors: Oliver Graf  17190
- * 			 Ivan Maldonado  17211
- * 			 Odalis Reyes  17032
- * 			 Mayra Silva  17276
- * @File name: Errores.java
- * @Date and Project: Proyecto final de POO (24/09/2017)
+ * @author Mayra Silva    17276
+ * @author Odalis Reyes   17032
+ * @author Ivan Maldonado 17211
+ * 
+ * @file Errores.java
+ * @since 24/09/17
  */
-
-
 
 
 public class Errores {
@@ -26,9 +24,11 @@ public class Errores {
 
 	//METODOS
 	
-	/*
+	/**
 	 * METODO 1: Este método tiene como propósito evaluar si lo que ingresa el usuario es un entero y si es parte del menu;
-	 * @param s, largo
+	 * 
+	 * @param s
+	 * @param largo
 	 * @return boolean
 	 */
 	public boolean evaluarInt(String s, int largo) {

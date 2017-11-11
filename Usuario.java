@@ -1,167 +1,165 @@
-/*
+import org.mongodb.morphia.annotations.Entity;
+
+/**
+ * Esta clase tiene como principal objetivo guardar los datos del usuario y los
+ * datos del vehículo que usa el usuario. Se creó el constructor, junto con los
+ * getters y setters de cada atributo.
  * 
- * Esta clase tiene como principal objetivo guardar los datos del usuario y los datos del vehículo que usa el usuario. 
- * Se creó el constructor, junto con los getters y setters de cada atributo. 
+ * @author odalisreyes
+ * @author Mayra Silva 17276
+ * @author Odalis Reyes 17032
+ * @author Ivan Maldonado 17211
  * 
- * @Authors: Oliver Graf  17190
- * 			 Ivan Maldonado  17211
- * 			 Odalis Reyes  17032
- * 			 Mayra Silva  17276
- * @File name: Usuario.java
- * @Date and Project: Proyecto final de POO (20/09/2017)
+ * @file Usuario.java
+ * @since 20/09/17
  */
 
 
-
-
+@Entity
 public class Usuario {
-	/*
-	 * Se declaran los atributos necesarios para la clase Usuario
-	 */
+
+	/* Se declaran los atributos necesarios para la clase Usuario */
+	private String user;
+	private String password;
 	private String nombre;
+	private String apellido;
 	private int tarjeta;
 	private int cvv;
-	private 	String fechaExp;
-	private String placa; 
-	private String color;
-	private int modelo;
-	private String linea;
-	private String marca; 
-	
-	
-	/*
-	 * CONSTRUCTOR
-	 * Se crea el constructor, con la inicialización de cada atributo
+	private String fechaExp;
+
+	/**
+	 * Constructor. Se crea el constructor, con la inicialización de cada atributo
+	 * 
+	 * @param user
+	 *            nombre de usuario para la cuenta
+	 * @param password
+	 *            contrasena del usuario
+	 * @param nombre
+	 *            nombre del usuario
+	 * @param apellido
+	 *            aprellido del usuario
+	 * @param tarjeta
+	 *            numero de tarjeta del usuario
+	 * @param cvv
+	 *            cvv de la tarjeta
+	 * @param fechaExp
+	 *            fecha de expiracion de la tarjeta
 	 */
-	public Usuario() {
-		nombre = " ";
-		tarjeta = 0;
-		cvv = 0;
-		fechaExp = " ";
-		placa = " ";
-		color = " "; 
-		modelo = 0;
-		linea = " "; 
-		marca = " ";
+	public Usuario(String user, String password, String nombre, String apellido, int tarjeta, int cvv,
+			String fechaExp) {
+		this.user = user;
+		this.password = password;
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.tarjeta = tarjeta;
+		this.cvv = cvv;
+		this.fechaExp = fechaExp;
 	}
-	
-	
-	//GETS Y SETS
-	
-	/*
-	 * @param: nombre
-	 * @return: nombre
+
+	/**
+	 * @return user
+	 */
+	public String getUser() {
+		return user;
+	}
+
+	/**
+	 * @param user
+	 *            nombre de usuario de la cuenta
+	 */
+	public void setUser(String user) {
+		this.user = user;
+	}
+
+	/**
+	 * @return password
+	 */
+	public String getPassword() {
+		return password;
+	}
+
+	/**
+	 * @param password
+	 *            la contrasena
+	 */
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	/**
+	 * @return nombre
 	 */
 	public String getNombre() {
 		return nombre;
 	}
-	
+
+	/**
+	 * @param nombre
+	 *            nombre del usuario
+	 */
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
-	
-	/*
-	 * @param: tarjeta
-	 * @return: tarjeta
+
+	/**
+	 * @return apellido
+	 */
+	public String getApellido() {
+		return apellido;
+	}
+
+	/**
+	 * @param apellido
+	 *            apellido del usuario
+	 */
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+
+	/**
+	 * @return tarjeta
 	 */
 	public int getTarjeta() {
 		return tarjeta;
 	}
-	
+
+	/**
+	 * @param tarjeta
+	 *            numero de tarjeta
+	 */
 	public void setTarjeta(int tarjeta) {
 		this.tarjeta = tarjeta;
 	}
-	
-	
-	/*
-	 * @param: cvv
-	 * @return: cvv
+
+	/**
+	 * @return cvv
 	 */
 	public int getCvv() {
 		return cvv;
 	}
-	
+
+	/**
+	 * @param cvv
+	 *            cvv de la tarjeta
+	 */
 	public void setCvv(int cvv) {
 		this.cvv = cvv;
 	}
-	
-	
-	/*
-	 * @param: fecha de expiración
-	 * @return: fecha de expiración
+
+	/**
+	 * @return fechaExp
 	 */
 	public String getFechaExp() {
 		return fechaExp;
 	}
-	
+
+	/**
+	 * @param fechaExp
+	 *            fecha de expiracion de la tarjeta
+	 */
 	public void setFechaExp(String fechaExp) {
 		this.fechaExp = fechaExp;
 	}
-	
-	
-	/*
-	 * @param: placa
-	 * @return: placa
-	 */
-	public String getPlaca() {
-		return placa;
-	}
-	
-	public void setPlaca(String placa) {
-		this.placa = placa;
-	}
-	
-	
-	/*
-	 * @param: color
-	 * @return: color
-	 */
-	public String getColor() {
-		return color;
-	}
-	
-	public void setColor(String color) {
-		this.color = color;
-	}
-	
-	
-	/*
-	 * @param: modelo
-	 * @return: modelo
-	 */
-	public int getModelo() {
-		return modelo;
-	}
-	
-	public void setModelo(int modelo) {
-		this.modelo = modelo;
-	}
-	
-	
-	/*
-	 * @param: linea
-	 * @return: linea
-	 */
-	public String getLinea() {
-		return linea;
-	}
-	
-	public void setLinea(String linea) {
-		this.linea = linea;
-	}
-	
-	
-	/* 
-	 * @param: marca
-	 * @return: marca
-	 */
-	public String getMarca() {
-		return marca;
-	}
-	
-	public void setMarca(String marca) {
-		this.marca = marca;
-	}
-	
+
 }
+
