@@ -26,7 +26,10 @@ public class Main {
 	private JFrame frame;
 	private JTextField UsuarioTF;
 	private JPasswordField PasswordTF;
-
+	
+	
+	//Declaracion de variables globales
+	Errores error;
 
 	
 
@@ -57,9 +60,13 @@ public class Main {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+<<<<<<< HEAD
 		
 		DbConnection osito = new DbConnection();
 		
+=======
+		Errores error=new Errores();
+>>>>>>> master
 		frame = new JFrame();
 		frame.setBounds(100, 100, 454, 343);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -102,6 +109,7 @@ public class Main {
 		
 		/* Boton para ingresar al iOrder */
 		JButton IngresarB = new JButton("Ingresar");
+		
 		IngresarB.setFont(new Font("Calibri", Font.PLAIN, 14));
 		IngresarB.setBounds(238, 223, 89, 29);
 		frame.getContentPane().add(IngresarB);
@@ -111,6 +119,22 @@ public class Main {
 			public void actionPerformed(ActionEvent e) {
 				Second CrearTF = new Second();
 				CrearTF.setVisible(true);
+			}
+		});
+		
+		//Si en este caso, el usuairo no ingresa nada en el text fiel aparecera un error
+		IngresarB.addActionListener(new ActionListener() {
+			String password=String.valueOf(PasswordTF);
+			public void actionPerformed(ActionEvent arg0) {
+				if(UsuarioTF.getText().equals("") && password.equals("")) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario y contraseña");
+				}
+				if(UsuarioTF.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario");
+				}
+				if(password.equals("")) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar su contraseña");
+				}
 			}
 		});
 		
