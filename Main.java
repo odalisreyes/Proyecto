@@ -30,6 +30,7 @@ public class Main {
 	
 	//Declaracion de variables globales
 	Errores error;
+	Manager controlador1;
 
 	
 
@@ -62,7 +63,7 @@ public class Main {
 	private void initialize() {
 
 		
-		
+		Manager controlador1= new Manager();
 
 		Errores error = new Errores();
 
@@ -138,6 +139,8 @@ public class Main {
 				else if(PasswordTF.getPassword().toString().equals("")) {
 				JOptionPane.showMessageDialog(null, "Debe ingresar su nombre contraseña");
 			}
+				
+				
 	
 			}
 		});

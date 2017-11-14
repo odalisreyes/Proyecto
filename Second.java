@@ -214,16 +214,19 @@ public class Second extends JFrame {
 					JOptionPane.showMessageDialog(null, "«- Mes -» no es una opcion valida. Eliga un mes correcto");
 				}
 				if(anoCB.getSelectedIndex() == 0) {
-					JOptionPane.showMessageDialog(null, "«- Año -» no es una opcion valida. Eliga un año correcto");
+					JOptionPane.showMessageDialog(null, "«- A\u00f1o -» no es una opcion valida. Eliga un a\u00f1o correcto");
 				}
-				
-				/* se crea un objeto de tipo manager para llenar la base de datos*/
-				Manager x = new Manager();
 
 				
 				if(error.verificarString(usernameTF.getText())==false) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar un numero");
+					JOptionPane.showMessageDialog(null, "Debe ingresar solo letras");
 				}
+				
+				String numeroTarjeta=String.valueOf(numTarTF);
+				if(error.verificarInt(numeroTarjeta)==false) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar solo numeros");
+				}
+				
 				
 				
 
