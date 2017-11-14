@@ -14,68 +14,96 @@
 public class Errores {
 
 	
+	private boolean error1;
+	private boolean error2;
 	/**
-	 * CONSTRUCTOR
+	 * @param error1
+	 * @param error2
 	 */
-	public Errores() {
-
+	public Errores(boolean error1, boolean error2) {
+		
+		this.error1 = error1;
+		this.error2 = error2;
 	}
 	
+	public Errores() {
+	}
 
-	//METODOS
-	
 	/**
-	 * METODO 1: Este método tiene como propósito evaluar si lo que ingresa el usuario es un entero y si es parte del menu;
-	 * 
-	 * @param s
-	 * @param largo
-	 * @return boolean
+	 * @return the error1
 	 */
-	public boolean evaluarInt(String s, int largo) {
-		   try { 
-			   /*
-			    * Se colocan los parametros, el cual verifica si el numero ingresado para el menu es parte
-			    * del rango que se coloca en las opciones
-			    */
-		        int s1 = Integer.parseInt(s); 
-		        if (s1 > 0 && s1 < largo) {
-		        	return true;
-		        }
-		        /*
-		         * Si no esta dentro del parametro, retorna un boolean false, puesto que el numero ingresado 
-		         * no esta dentro del rango especificado
-		         */
-		        else {
-		        	return false;
-		        }
-		      
-		    /*
-		     * En caso que el numero ingresado no fuese un int, regresa un boolean false
-		     */
-		    } catch(NumberFormatException e) { 
-		        return false; 
-		    } catch(NullPointerException e) {
-		        return false;
-		    }
-		 
-		}
+	public boolean isError1() {
+		return error1;
+	}
+
+	/**
+	 * @param error1 the error1 to set
+	 */
+	public void setError1(boolean error1) {
+		this.error1 = error1;
+	}
+
+	/**
+	 * @return the error2
+	 */
+	public boolean isError2() {
+		return error2;
+	}
+
+	/**
+	 * @param error2 the error2 to set
+	 */
+	public void setError2(boolean error2) {
+		this.error2 = error2;
+	}
 	
+	//METODOS 
 	
-	/* public boolean evaluarString(String s) {
+
+	
+	//Metodo para verificar si el dato ingresado es un string
+	/*
+	 * @param: string cadena
+	 * @return: boolean error1
+	 */
+	
+	public boolean verificarString(String cadena) {
 		try {
-			if(s instanceof String) {
-				return true;
-			}
-			else {
-				return false;
-			}
-			
-		}catch(Exception e) {
-			return false;
+			Integer.parseInt(cadena);
+			this.error1=false;
 		}
-		
-	} */
+		catch(NumberFormatException nfe){
+			this.error1=true;
+			
+		}
+		return error1;
+	}
+	
+	/*
+	 * Metodo para verificar si el dato ingresado es un int
+	 * @param: string cadena
+	 * @return boolean error2.
+	 * 
+	 */
+	
+	public boolean verificarInt(String cadena) {
+		try { 
+			Integer.parseInt(cadena);
+			this.error2=true;
+		}
+		catch(NumberFormatException nfe) {
+			this.error2=false;
+		}
+		return error2;
+	}
+	
+	}
+
+	
+	
 	
 	
 
-}
+	
+	
+

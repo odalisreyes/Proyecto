@@ -3,7 +3,12 @@ public class Matriz2 {
 	/*
 	 * Declaración del atributo comida (se especifica el tamaño de la matriz)
 	 */
-	private String[][] localidad = new String [3][5];
+	private String[][] localidad = new String [3][42];
+	
+	
+	
+	
+	
 	
 	/*
 	 * Es para obtener un objeto dentro de la matriz
@@ -17,6 +22,7 @@ public class Matriz2 {
 		 * Se colocan los nombres para cada fila y columna de la matriz
 		 */
 		public Matriz2 () {
+			
 			//Localidades de McDonald's
 			this.localidad [0][0] = "McDonald's";
 			this.localidad [0][1] = " McDonald's Mix 5ta Avenida 3-05 Sector A-3 San Cristobal zona 8 de Mixco Centro Comercial Mix Local 27";

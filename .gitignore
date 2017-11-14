@@ -6,6 +6,7 @@
 /Principal.class
 /Usuario.class
 /DbConnection.class
+<<<<<<< Updated upstream
 /Main$1.class
 /Main$2.class
 /Main.class
@@ -18,8 +19,15 @@
 /Second$1.class
 /Main$3.class
 /Second$2.class
+<<<<<<< Updated upstream
 /User.class
 /Cuenta.class
 /GameOver.class
 /Bombardero.class
 /Accion.class
+=======
+=======
+/Matriz2.class
+/Localidad.class
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

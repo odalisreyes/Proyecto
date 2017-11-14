@@ -1,4 +1,4 @@
-package GUI;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -171,10 +171,17 @@ public class Second extends JFrame {
 		
 		/* Boton para crear la cuenta */
 		JButton createB = new JButton("Crear");
+		
 		createB.setFont(new Font("Calibri", Font.PLAIN, 14));
 		createB.setBounds(174, 422, 117, 29);
 		contentPane.add(createB);
 		
+		
+		createB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
 		
 		
 	}
