@@ -37,6 +37,10 @@ public class Second extends JFrame {
 	private JPasswordField numTarTF;
 	private JTextField cvvTF;
 	private JPasswordField pssTF;
+	
+	
+	//Declaracion de variables globales.
+	Errores error;
 
 	/**
 	 * Launch the application.
@@ -58,6 +62,10 @@ public class Second extends JFrame {
 	 * Create the frame.
 	 */
 	public Second() {
+		Errores error= new Errores();
+		Manager x = new Manager();
+		
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 454, 507);
 		contentPane = new JPanel();
@@ -182,6 +190,7 @@ public class Second extends JFrame {
 		 */
 		createB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
 				/* errores por si dejan espacios vacios */
 				if(nombreTF.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "Debe ingresar un nombre");
@@ -210,10 +219,19 @@ public class Second extends JFrame {
 				
 				/* se crea un objeto de tipo manager para llenar la base de datos*/
 				Manager x = new Manager();
+
+				
+				if(error.verificarString(usernameTF.getText())==false) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar un numero");
+				}
+				
+				
+
 				x.crearUser(usernameTF.getText(), pssTF.getPassword().toString(), nombreTF.getText(), apellidoTF.getText(), numTarTF.getPassword().toString(), Integer.parseInt(cvvTF.getText()), mesCB.getSelectedIndex(), anoCB.getSelectedIndex());
 				
 				/* regresa al main */
 				setVisible(false);
+				
 			}
 		});
 		

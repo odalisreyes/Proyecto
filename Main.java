@@ -125,25 +125,20 @@ public class Main {
 			}
 		});
 		
-		
-		/**
-		 * action listener del boton "ingresar"
-		 */
+		//Metodo de action listener del boton ingresar
 		IngresarB.addActionListener(new ActionListener() {
-			String password=String.valueOf(PasswordTF);
+			
+			
 			public void actionPerformed(ActionEvent arg0) {
-				//Si en este caso, el usuairo no ingresa nada en el text fiel aparecera un error
-				if(UsuarioTF.getText().equals("") && password.equals("")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario y contrasena");
-				}
-				if(UsuarioTF.getText().equals("")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario");
-				}
-				if(password.equals("")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar su contrasena");
-				}
-				
-				/* en caso el usuario ya existe, aparece un aviso */
+				//Si en este caso, el usuario no ingresa nada en el text field aparecera un error
+				if(UsuarioTF.getText().equals("") || PasswordTF.getPassword().toString().equals("")) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario y/o  contraseña");
+					
+					}
+				else if(PasswordTF.getPassword().toString().equals("")) {
+				JOptionPane.showMessageDialog(null, "Debe ingresar su nombre contraseña");
+			}
+	
 			}
 		});
 		
