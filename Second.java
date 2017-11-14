@@ -5,6 +5,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
@@ -175,10 +177,42 @@ public class Second extends JFrame {
 		contentPane.add(createB);
 		
 		
+		/**
+		 * action listener del boton crear
+		 */
 		createB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				/* errores por si dejan espacios vacios */
+				if(nombreTF.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar un nombre");
+				}
+				if(apellidoTF.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar un apellido");
+				}
+				if(pssTF.equals("")) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar una contrasena");
+				}
+				if(usernameTF.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar un nombre de usuario");
+				}
+				if(numTarTF.equals("")) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar un numero de tarjeta");
+				}
+				if(cvvTF.getText().equals("")) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar un numero de CVV");
+				}
+				if(mesCB.getSelectedIndex() == 0) {
+					JOptionPane.showMessageDialog(null, "«- Mes -» no es una opcion valida. Eliga un mes correcto");
+				}
+				if(anoCB.getSelectedIndex() == 0) {
+					JOptionPane.showMessageDialog(null, "«- Año -» no es una opcion valida. Eliga un año correcto");
+				}
+				
+				/* se crea un objeto de tipo manager para llenar la base de datos*/
 				Manager x = new Manager();
 				x.crearUser(usernameTF.getText(), pssTF.getPassword().toString(), nombreTF.getText(), apellidoTF.getText(), numTarTF.getPassword().toString(), Integer.parseInt(cvvTF.getText()), mesCB.getSelectedIndex(), anoCB.getSelectedIndex());
+				
+				/* regresa al main */
 				setVisible(false);
 			}
 		});
