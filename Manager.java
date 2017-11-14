@@ -1,4 +1,10 @@
+import com.mongodb.MongoClient;
+
 import java.util.ArrayList;
+import java.util.List;
+
+import org.mongodb.morphia.Datastore;
+import org.mongodb.morphia.Morphia;
 import org.mongodb.morphia.query.Query;
 
 
@@ -17,12 +23,23 @@ import org.mongodb.morphia.query.Query;
 
 public class Manager {
 	/* ArrayList de la clase Usuario */
-	ArrayList<Usuario> usuario = new ArrayList<Usuario>();
-	private DbConnection osito = new DbConnection();
+	private Datastore based;
+	private ArrayList<Usuario> usuario;
+	
+	
 	
 	public Manager () {
 		/* Constructor del ArrayList*/
 		usuario = new ArrayList<Usuario>();
+		MongoClient mongo = new MongoClient();
+		Morphia morphia = new Morphia();
+		
+		/* Clases a guardar */
+		morphia.map(Usuario.class);
+		
+		/* Base de datos */
+		based = morphia.createDatastore(mongo, "iOrder");
+		
 	}
 	
 	/**
@@ -48,13 +65,31 @@ public class Manager {
 	 */
 	public void crearUser(String user, String password, String nombre, String apellido, String tarjeta, int cvv, int mes,
 			int ano) {
-		DbConnection big = new DbConnection();
+		
 		Usuario bang = new Usuario(user, password, nombre, apellido, tarjeta, cvv, mes,
 			ano);
-		usuario.add(bang);
-		big.based.save(usuario);
+		based.save(bang);
 	}
 	
+	
+	public boolean verificarUser(Usuario usuario) {
+		boolean ask= false;
+		Query<Usuario> query = based.createQuery(Usuario.class);
+		List<Usuario> lista = query.asList();
+		int cuenta= 0;
+		for(Usuario i: lista) {
+			this.usuario.add(cuenta, i);
+			cuenta++;
+		}
+		
+		for(Usuario k: this.usuario) {
+			if(usuario.getUser().equals(k.getUser())) {
+				ask =true;
+			}
+		}
+		
+		return ask;
+	}
 
 	
 	

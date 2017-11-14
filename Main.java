@@ -64,7 +64,7 @@ public class Main {
 		
 		
 
-		Errores error=new Errores();
+		Errores error = new Errores();
 
 		frame = new JFrame();
 		frame.setBounds(100, 100, 454, 343);
