@@ -37,6 +37,10 @@ public class Second extends JFrame {
 	private JPasswordField numTarTF;
 	private JTextField cvvTF;
 	private JPasswordField pssTF;
+	
+	
+	//Declaracion de variables globales.
+	Errores error;
 
 	/**
 	 * Launch the application.
@@ -58,6 +62,10 @@ public class Second extends JFrame {
 	 * Create the frame.
 	 */
 	public Second() {
+		Errores error= new Errores();
+		Manager x = new Manager();
+		
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 454, 507);
 		contentPane = new JPanel();
@@ -182,6 +190,7 @@ public class Second extends JFrame {
 		 */
 		createB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+
 				/* errores por si dejan espacios vacios */
 				if(nombreTF.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "Debe ingresar un nombre");
@@ -205,15 +214,27 @@ public class Second extends JFrame {
 					JOptionPane.showMessageDialog(null, "«- Mes -» no es una opcion valida. Eliga un mes correcto");
 				}
 				if(anoCB.getSelectedIndex() == 0) {
-					JOptionPane.showMessageDialog(null, "«- Año -» no es una opcion valida. Eliga un año correcto");
+					JOptionPane.showMessageDialog(null, "«- A\u00f1o -» no es una opcion valida. Eliga un a\u00f1o correcto");
+				}
+
+				
+				if(error.verificarString(usernameTF.getText())==false) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar solo letras");
 				}
 				
-				/* se crea un objeto de tipo manager para llenar la base de datos*/
-				Manager x = new Manager();
+				String numeroTarjeta=String.valueOf(numTarTF);
+				if(error.verificarInt(numeroTarjeta)==false) {
+					JOptionPane.showMessageDialog(null, "Debe ingresar solo numeros");
+				}
+				
+				
+				
+
 				x.crearUser(usernameTF.getText(), pssTF.getPassword().toString(), nombreTF.getText(), apellidoTF.getText(), numTarTF.getPassword().toString(), Integer.parseInt(cvvTF.getText()), mesCB.getSelectedIndex(), anoCB.getSelectedIndex());
 				
 				/* regresa al main */
 				setVisible(false);
+				
 			}
 		});
 		
