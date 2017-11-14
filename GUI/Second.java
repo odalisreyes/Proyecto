@@ -174,5 +174,11 @@ public class Second extends JFrame {
 		createB.setFont(new Font("Calibri", Font.PLAIN, 14));
 		createB.setBounds(174, 422, 117, 29);
 		contentPane.add(createB);
+		
+		
+		
 	}
+	
+	
+	
 }

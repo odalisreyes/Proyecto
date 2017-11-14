@@ -1,4 +1,6 @@
+import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
 
 /**
  * Esta clase tiene como principal objetivo guardar los datos del usuario y los
@@ -14,18 +16,21 @@ import org.mongodb.morphia.annotations.Entity;
  * @since 20/09/17
  */
 
-
 @Entity
 public class Usuario {
 
 	/* Se declaran los atributos necesarios para la clase Usuario */
-	private String user;
-	private String password;
-	private String nombre;
-	private String apellido;
-	private int tarjeta;
-	private int cvv;
-	private String fechaExp;
+	@Id
+	public ObjectId id;
+	public String user;
+	public String password;
+	public String nombre;
+	public String apellido;
+	public int tarjeta;
+	public int cvv;
+	public int mes;
+	public int ano;
+	public String idUsuario;
 
 	/**
 	 * Constructor. Se crea el constructor, con la inicialización de cada atributo
@@ -42,18 +47,26 @@ public class Usuario {
 	 *            numero de tarjeta del usuario
 	 * @param cvv
 	 *            cvv de la tarjeta
-	 * @param fechaExp
-	 *            fecha de expiracion de la tarjeta
+	 * @param mes
+	 *            mes de la fecha de expiracion de la tarjeta
+	 * @param ano
+	 *            anio del mes de la fecha de expiracion de la tarjeta
+	 * @param idUsuario
 	 */
-	public Usuario(String user, String password, String nombre, String apellido, int tarjeta, int cvv,
-			String fechaExp) {
+	public Usuario(String user, String password, String nombre, String apellido, int tarjeta, int cvv, int mes, int ano,
+			String idUsuario) {
 		this.user = user;
 		this.password = password;
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.tarjeta = tarjeta;
 		this.cvv = cvv;
-		this.fechaExp = fechaExp;
+		this.mes = mes;
+		this.ano = ano;
+		this.idUsuario = idUsuario;
+	}
+
+	public Usuario() {
 	}
 
 	/**
@@ -147,19 +160,41 @@ public class Usuario {
 	}
 
 	/**
-	 * @return fechaExp
+	 * @return mes
 	 */
-	public String getFechaExp() {
-		return fechaExp;
+	public int getMes() {
+		return mes;
 	}
 
 	/**
-	 * @param fechaExp
-	 *            fecha de expiracion de la tarjeta
+	 * @param mes
+	 *            mes de la fecha de expiracion de la tarjeta
 	 */
-	public void setFechaExp(String fechaExp) {
-		this.fechaExp = fechaExp;
+	public void setMes(int mes) {
+		this.mes = mes;
+	}
+
+	/**
+	 * @return ano
+	 */
+	public int getAno() {
+		return ano;
+	}
+
+	/**
+	 * @param ano
+	 *            anio de la fecha de expiracion de la tarjeta
+	 */
+	public void setAno(int ano) {
+		this.ano = ano;
+	}
+
+	/**
+	 * 
+	 * @return idUsuario
+	 */
+	public String getId() {
+		return idUsuario;
 	}
 
 }
-
