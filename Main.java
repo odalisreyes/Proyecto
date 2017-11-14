@@ -114,6 +114,10 @@ public class Main {
 		frame.getContentPane().add(IngresarB);
 		
 		
+		/**
+		 * action lsitener del boton crear
+		 * lleva a otro JFrame para llenar los datos de un nuevo usuario
+		 */
 		CrearB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Second CrearTF = new Second();
@@ -121,12 +125,16 @@ public class Main {
 			}
 		});
 		
-		//Si en este caso, el usuairo no ingresa nada en el text fiel aparecera un error
+		
+		/**
+		 * action listener del boton "ingresar"
+		 */
 		IngresarB.addActionListener(new ActionListener() {
 			String password=String.valueOf(PasswordTF);
 			public void actionPerformed(ActionEvent arg0) {
+				//Si en este caso, el usuairo no ingresa nada en el text fiel aparecera un error
 				if(UsuarioTF.getText().equals("") && password.equals("")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario y contrase�a");
+					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario y contrasena");
 				}
 				if(UsuarioTF.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario");
@@ -134,6 +142,8 @@ public class Main {
 				if(password.equals("")) {
 					JOptionPane.showMessageDialog(null, "Debe ingresar su contrasena");
 				}
+				
+				/* en caso el usuario ya existe, aparece un aviso */
 			}
 		});
 		
