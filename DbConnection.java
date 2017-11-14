@@ -1,4 +1,3 @@
-
 import com.mongodb.MongoClient;
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
@@ -23,18 +22,10 @@ public class DbConnection {
 	 * 	private List<Usuario> usuarios;
 	MongoClient mongo;
 	MongoDatabase database;
-<<<<<<< Updated upstream
 	MongoCollection<Document> personita;
 	
-<<<<<<< Updated upstream
 	 */
 
-=======
-	
-=======
-	MongoCollection<Document> usuarios;
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 	public DbConnection() {
 		
 		MongoClient mongo = new MongoClient();
@@ -50,20 +41,11 @@ public class DbConnection {
 		/**
 		 * try {
 			mongo = new MongoClient( "localhost" , 27017 );
-<<<<<<< Updated upstream
-=======
-			database = mongo.getDatabase("iOrder");
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
 			personita = database.getCollection("Usuarios");
-=======
-			usuarios = database.getCollection("Usuarios");
->>>>>>> Stashed changes
 			System.out.println("Conexion establecida");
 		} catch(Exception e) {
 			System.out.println("Error en la conexion");
 		}}
-
 		 */
 		
 	
@@ -77,7 +59,6 @@ public class DbConnection {
 	 */
 	
 	
-<<<<<<< Updated upstream
 	
 	/**
 	 * Metodo para hacer una consulta en la lista de usuarios de tipo Usuario
@@ -89,21 +70,8 @@ public class DbConnection {
 	}
 	 */
 
-
-	//Creacion de metodo para llenar base de datos
-	public void addUsuario(Usuario user){
-		
-		Document nuevo = new Document("title", "") 
-			      .append("Nombre", user.getNombre())
-			      .append("Tarjeta", user.getTarjeta()) 
-			      .append("CVV", user.getCvv()) 
-			      .append("FechaExpiracion", user.getFechaExp());
-		
-		this.usuarios.insertMany(user); 
-	
-		
-	}
->>>>>>> Stashed changes
->>>>>>> Stashed changes
+			
+			
+	}		
 	
 }

@@ -16,11 +16,10 @@ import org.mongodb.morphia.annotations.Id;
  * @since 20/09/17
  */
 
-@Entity ("iOrder")
+@Entity
 public class Usuario {
 
 	/* Se declaran los atributos necesarios para la clase Usuario */
-<<<<<<< Updated upstream
 	@Id
 	public ObjectId id;
 	public String user;
@@ -31,21 +30,7 @@ public class Usuario {
 	public int cvv;
 	public int mes;
 	public int ano;
-<<<<<<< HEAD
-	/* public String idUsuario; */
-=======
-	public String idUsuario;
-=======
-	private String user;
-	private String password;
-	private String nombre;
-	private String apellido;
-	private int tarjeta;
-	private int cvv;
-	private String fechaExp;
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
->>>>>>> master
+
 
 	/**
 	 * Constructor. Se crea el constructor, con la inicialización de cada atributo
@@ -75,33 +60,11 @@ public class Usuario {
 		this.apellido = apellido;
 		this.tarjeta = tarjeta;
 		this.cvv = cvv;
-<<<<<<< Updated upstream
 		this.mes = mes;
 		this.ano = ano;
-
 	}
 
 	public Usuario() {
-=======
-		this.fechaExp = fechaExp;
-=======
-	private String usuario;
-	private String contrasena;
-	
-	
-	/*
-	 * CONSTRUCTOR
-	 * Se crea el constructor, con la inicialización de cada atributo
-	 */
-	public Usuario() {
-		nombre = " ";
-		tarjeta = 0;
-		cvv = 0;
-		fechaExp = " ";
-		usuario="";
-		contrasena="";
->>>>>>> Stashed changes
->>>>>>> Stashed changes
 	}
 
 	/**
@@ -209,53 +172,12 @@ public class Usuario {
 		this.mes = mes;
 	}
 
-<<<<<<< Updated upstream
 	/**
 	 * @return ano
 	 */
 	public int getAno() {
 		return ano;
 	}
-=======
-<<<<<<< Updated upstream
-=======
-
-	/**
-	 * @return the usuario
-	 */
-	public String getUsuario() {
-		return usuario;
-	}
-
-
-	/**
-	 * @param usuario the usuario to set
-	 */
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
-	}
-
-
-	/**
-	 * @return the contrasena
-	 */
-	public String getContrasena() {
-		return contrasena;
-	}
-
-
-	/**
-	 * @param contrasena the contrasena to set
-	 */
-	public void setContrasena(String contrasena) {
-		this.contrasena = contrasena;
-	}
-	
-	
-	
->>>>>>> Stashed changes
-}
->>>>>>> Stashed changes
 
 	/**
 	 * @param ano

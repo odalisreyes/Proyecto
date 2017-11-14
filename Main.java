@@ -60,13 +60,12 @@ public class Main {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-<<<<<<< HEAD
+
 		
-		DbConnection osito = new DbConnection();
 		
-=======
+
 		Errores error=new Errores();
->>>>>>> master
+
 		frame = new JFrame();
 		frame.setBounds(100, 100, 454, 343);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -127,13 +126,13 @@ public class Main {
 			String password=String.valueOf(PasswordTF);
 			public void actionPerformed(ActionEvent arg0) {
 				if(UsuarioTF.getText().equals("") && password.equals("")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario y contraseña");
+					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario y contraseï¿½a");
 				}
 				if(UsuarioTF.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario");
 				}
 				if(password.equals("")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar su contraseña");
+					JOptionPane.showMessageDialog(null, "Debe ingresar su contrasena");
 				}
 			}
 		});
