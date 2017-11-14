@@ -1,4 +1,4 @@
-package GUI;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -176,6 +176,13 @@ public class Second extends JFrame {
 		contentPane.add(createB);
 		
 		
+		createB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Manager x = new Manager();
+				x.crearUser(usernameTF.getText(), pssTF.getPassword().toString(), nombreTF.getText(), apellidoTF.getText(), numTarTF.getPassword().toString(), Integer.parseInt(cvvTF.getText()), mesCB.getSelectedIndex(), anoCB.getSelectedIndex());
+				setVisible(false);
+			}
+		});
 		
 	}
 	

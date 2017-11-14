@@ -16,7 +16,7 @@ import org.mongodb.morphia.annotations.Id;
  * @since 20/09/17
  */
 
-@Entity
+@Entity ("iOrder")
 public class Usuario {
 
 	/* Se declaran los atributos necesarios para la clase Usuario */
@@ -26,11 +26,11 @@ public class Usuario {
 	public String password;
 	public String nombre;
 	public String apellido;
-	public int tarjeta;
+	public String tarjeta;
 	public int cvv;
 	public int mes;
 	public int ano;
-	public String idUsuario;
+	/* public String idUsuario; */
 
 	/**
 	 * Constructor. Se crea el constructor, con la inicialización de cada atributo
@@ -53,8 +53,7 @@ public class Usuario {
 	 *            anio del mes de la fecha de expiracion de la tarjeta
 	 * @param idUsuario
 	 */
-	public Usuario(String user, String password, String nombre, String apellido, int tarjeta, int cvv, int mes, int ano,
-			String idUsuario) {
+	public Usuario(String user, String password, String nombre, String apellido, String tarjeta, int cvv, int mes, int ano) {
 		this.user = user;
 		this.password = password;
 		this.nombre = nombre;
@@ -63,7 +62,7 @@ public class Usuario {
 		this.cvv = cvv;
 		this.mes = mes;
 		this.ano = ano;
-		this.idUsuario = idUsuario;
+
 	}
 
 	public Usuario() {
@@ -132,7 +131,7 @@ public class Usuario {
 	/**
 	 * @return tarjeta
 	 */
-	public int getTarjeta() {
+	public String getTarjeta() {
 		return tarjeta;
 	}
 
@@ -140,7 +139,7 @@ public class Usuario {
 	 * @param tarjeta
 	 *            numero de tarjeta
 	 */
-	public void setTarjeta(int tarjeta) {
+	public void setTarjeta(String tarjeta) {
 		this.tarjeta = tarjeta;
 	}
 
@@ -189,12 +188,5 @@ public class Usuario {
 		this.ano = ano;
 	}
 
-	/**
-	 * 
-	 * @return idUsuario
-	 */
-	public String getId() {
-		return idUsuario;
-	}
 
 }

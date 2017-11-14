@@ -18,6 +18,7 @@ import org.mongodb.morphia.query.Query;
 public class Manager {
 	/* ArrayList de la clase Usuario */
 	ArrayList<Usuario> usuario = new ArrayList<Usuario>();
+	private DbConnection osito = new DbConnection();
 	
 	public Manager () {
 		/* Constructor del ArrayList*/
@@ -45,14 +46,17 @@ public class Manager {
 	 *            anio del mes de la fecha de expiracion de la tarjeta
 	 * @param idUsuario
 	 */
-	public void crearUser(String user, String password, String nombre, String apellido, int tarjeta, int cvv, int mes,
-			int ano, String idUsuario) {
+	public void crearUser(String user, String password, String nombre, String apellido, String tarjeta, int cvv, int mes,
+			int ano) {
 		DbConnection big = new DbConnection();
 		Usuario bang = new Usuario(user, password, nombre, apellido, tarjeta, cvv, mes,
-			ano, idUsuario);
+			ano);
 		usuario.add(bang);
 		big.based.save(usuario);
 	}
+	
+
+	
 	
 	
 	

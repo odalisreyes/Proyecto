@@ -7,9 +7,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
-
-import GUI.Second;
-
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
@@ -60,6 +57,9 @@ public class Main {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
+		
+		DbConnection osito = new DbConnection();
+		
 		frame = new JFrame();
 		frame.setBounds(100, 100, 454, 343);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
