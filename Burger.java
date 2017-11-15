@@ -70,7 +70,7 @@ public class Burger extends JFrame {
 		JComboBox comboBox_1 = new JComboBox();
 		comboBox_1.setFont(new Font("Calibri", Font.PLAIN, 14));
 		comboBox_1.setBounds(19, 172, 228, 27);
-		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"- Escoge comida de pollo/otros -", 
+		comboBox_1.setModel(new DefaultComboBoxModel(new String[] {"- Escoge una opci\u00f3n -", 
 				"King de Pollo", "King de Pollo Americano", "King de Pollo Frances", "King de Pollo Italiano",
 				"King de Jamon y Queso", "Tender Crispy", "TENDERGRILL®", "King Pescado", "4 BK® Nuggets",
 				"10 BK® Nuggets", "35 BK® Nuggets", "Derretido"}));
@@ -107,8 +107,47 @@ public class Burger extends JFrame {
 		contentPane.add(lblSodas);
 		
 		JComboBox comboBox_4 = new JComboBox();
+		comboBox_4.setFont(new Font("Calibri", Font.PLAIN, 14));
 		comboBox_4.setBounds(19, 373, 228, 27);
-		comboBox_4.setBounds(new DefaultComboBoxModel(new String[] {"- Escoge tu bebida -", "Soda Pepsi®"}));
+		comboBox_4.setModel(new DefaultComboBoxModel(new String[] {"- Escoge tu bebida -", "Soda Pepsi®", 
+				"Soda Pepsi®Dieta", "Soda 7-UP®", "Soda Mirinda®", "Soda Grapette®", "Agua Pura",
+				"Café", "Chocolate Caliente", "Te Caliente"}));
 		contentPane.add(comboBox_4);
+		
+		JLabel lblExtras = new JLabel("Extras");
+		lblExtras.setFont(new Font("Calibri", Font.PLAIN, 14));
+		lblExtras.setBounds(30, 412, 61, 16);
+		contentPane.add(lblExtras);
+		
+		JComboBox comboBox_5 = new JComboBox();
+		comboBox_5.setFont(new Font("Calibri", Font.PLAIN, 14));
+		comboBox_5.setBounds(19, 437, 228, 27);
+		comboBox_5.setModel(new DefaultComboBoxModel(new String [] {"- Escoge algo extra -", "Papas Fritas",
+				"Aros de Cebolla", "Hash Browns"}));
+		contentPane.add(comboBox_5);
+		
+		JLabel lblPostres = new JLabel("Postres");
+		lblPostres.setFont(new Font("Calibri", Font.PLAIN, 14));
+		lblPostres.setBounds(30, 476, 61, 16);
+		contentPane.add(lblPostres);
+		
+		JComboBox comboBox_6 = new JComboBox();
+		comboBox_6.setFont(new Font("Calibri", Font.PLAIN, 14));
+		comboBox_6.setBounds(19, 504, 228, 27);
+		comboBox_6.setModel(new DefaultComboBoxModel(new String [] {"- Endulzate la vida con -", "Tostadas Francesas",
+				"HERSHEY'S® Sundae Pie", "REESE'S® Pie", "Pie Manzana", "Pie Queso", "Cinnamon Roll", "BK® Cookie Chocolate Chips",
+				"BK® Cookie Macadamia", "Helado Cono", "Sundae", "Canasta Whafle", "Batido"}));
+		contentPane.add(comboBox_6);
+		
+		JLabel lblHamburguesasParaNinos = new JLabel("Opciones para ni\u00f1os");
+		lblHamburguesasParaNinos.setFont(new Font("Calibri", Font.PLAIN, 14));
+		lblHamburguesasParaNinos.setBounds(30, 543, 152, 16);
+		contentPane.add(lblHamburguesasParaNinos);
+		
+		JComboBox comboBox_7 = new JComboBox();
+		comboBox_7.setBounds(19, 571, 228, 27);
+		comboBox_7.setModel(new DefaultComboBoxModel(new String [] {"- Escoge una opci\u00f3n -", "Quesoburguesa",
+				"4 BK® Nuggets", "Derretido", "HAMBURGEUSA"}));
+		contentPane.add(comboBox_7);
 	}
 }
