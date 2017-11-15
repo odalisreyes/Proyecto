@@ -82,9 +82,9 @@ public class Second extends JFrame {
 		lblNmeroDeCvv.setBounds(245, 272, 142, 16);
 		contentPane.add(lblNmeroDeCvv);
 		
-		JLabel lblFechaDeExpiracin = new JLabel("Fecha de expiración");
+		JLabel lblFechaDeExpiracin = new JLabel("Fecha de expiración de la tarjeta");
 		lblFechaDeExpiracin.setFont(new Font("Calibri", Font.PLAIN, 14));
-		lblFechaDeExpiracin.setBounds(60, 341, 130, 16);
+		lblFechaDeExpiracin.setBounds(60, 341, 208, 16);
 		contentPane.add(lblFechaDeExpiracin);
 		
 		JLabel lblNmeroDeTarjeta = new JLabel("Número de tarjeta");
@@ -181,8 +181,13 @@ public class Second extends JFrame {
 		/* Boton para crear la cuenta */
 		JButton createB = new JButton("Crear");
 		createB.setFont(new Font("Calibri", Font.PLAIN, 14));
-		createB.setBounds(174, 422, 117, 29);
+		createB.setBounds(260, 421, 117, 29);
 		contentPane.add(createB);
+		
+		JButton regresarB = new JButton("Regresar");
+		regresarB.setFont(new Font("Calibri", Font.PLAIN, 14));
+		regresarB.setBounds(88, 421, 117, 29);
+		contentPane.add(regresarB);
 		
 		
 		/**
@@ -249,12 +254,15 @@ public class Second extends JFrame {
 					setVisible(false);
 				}
 				
-				
+			}
+		});
+		
+		
+		regresarB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
 			}
 		});
 		
 	}
-	
-	
-	
 }
