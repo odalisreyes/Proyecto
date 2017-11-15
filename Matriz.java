@@ -140,7 +140,7 @@ public class Matriz {
 		this.comida [0][76] = "Nectar Fresa";
 		this.comida [0][77] = "Nectar Mora";
 		this.comida [0][78] = "Rosa de Jamaica";
-		this.comida [0][79] = "Té Frío";
+		this.comida [0][79] = "Te Frio";
 		this.comida [0][80] = "Agua Pura";
 		
 		this.comida [1][0] = "McDonald's Precios";
@@ -153,7 +153,7 @@ public class Matriz {
 		this.comida [1][3] = "25";
 		this.comida [1][4] = "30";
 		this.comida [1][5] = "20";
-		this.comida [1][6] = "25";
+		this.comida [1][6] = "25"; 
 		this.comida [1][7] = "25";
 		this.comida [1][8] = "25";
 		this.comida [1][9] = "25";
