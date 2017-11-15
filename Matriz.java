@@ -309,6 +309,10 @@ public class Matriz {
 		this.comida [2][33] = "BK® Muffin Huevo Queso Tocino";
 		this.comida [2][34] = "Panqueques Plain";
 		this.comida [2][35] = "Tostadas Francesas";
+		
+		/*
+		 * SODAS
+		 */
 		this.comida [2][36] = "Soda Pepsi®";
 		this.comida [2][37] = "Soda Pepsi®Dieta";
 		this.comida [2][38] = "Soda 7-UP®";
