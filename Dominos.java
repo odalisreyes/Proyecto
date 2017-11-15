@@ -39,7 +39,7 @@ public class Dominos extends JFrame {
 	 */
 	public Dominos() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 521, 644);
+		setBounds(100, 100, 521, 660);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -171,7 +171,7 @@ public class Dominos extends JFrame {
 		
 		JButton comprarB = new JButton("Comprar");
 		comprarB.setFont(new Font("Calibri", Font.PLAIN, 14));
-		comprarB.setBounds(219, 576, 117, 29);
+		comprarB.setBounds(219, 588, 117, 29);
 		contentPane.add(comprarB);
 		
 		JRadioButton b1 = new JRadioButton("1");
@@ -193,5 +193,125 @@ public class Dominos extends JFrame {
 		radioButton.setFont(new Font("Calibri", Font.PLAIN, 14));
 		radioButton.setBounds(452, 162, 46, 23);
 		contentPane.add(radioButton);
+		
+		JRadioButton c1 = new JRadioButton("1");
+		c1.setFont(new Font("Calibri", Font.PLAIN, 14));
+		c1.setBounds(278, 224, 46, 23);
+		contentPane.add(c1);
+		
+		JRadioButton c2 = new JRadioButton("2");
+		c2.setFont(new Font("Calibri", Font.PLAIN, 14));
+		c2.setBounds(336, 224, 46, 23);
+		contentPane.add(c2);
+		
+		JRadioButton c3 = new JRadioButton("3");
+		c3.setFont(new Font("Calibri", Font.PLAIN, 14));
+		c3.setBounds(394, 224, 46, 23);
+		contentPane.add(c3);
+		
+		JRadioButton c4 = new JRadioButton("4");
+		c4.setFont(new Font("Calibri", Font.PLAIN, 14));
+		c4.setBounds(452, 224, 46, 23);
+		contentPane.add(c4);
+		
+		JRadioButton d1 = new JRadioButton("1");
+		d1.setFont(new Font("Calibri", Font.PLAIN, 14));
+		d1.setBounds(278, 286, 46, 23);
+		contentPane.add(d1);
+		
+		JRadioButton d2 = new JRadioButton("2");
+		d2.setFont(new Font("Calibri", Font.PLAIN, 14));
+		d2.setBounds(336, 286, 46, 23);
+		contentPane.add(d2);
+		
+		JRadioButton d3 = new JRadioButton("3");
+		d3.setFont(new Font("Calibri", Font.PLAIN, 14));
+		d3.setBounds(394, 286, 46, 23);
+		contentPane.add(d3);
+		
+		JRadioButton d4 = new JRadioButton("4");
+		d4.setFont(new Font("Calibri", Font.PLAIN, 14));
+		d4.setBounds(452, 286, 46, 23);
+		contentPane.add(d4);
+		
+		JRadioButton e1 = new JRadioButton("1");
+		e1.setFont(new Font("Calibri", Font.PLAIN, 14));
+		e1.setBounds(278, 345, 46, 23);
+		contentPane.add(e1);
+		
+		JRadioButton e2 = new JRadioButton("2");
+		e2.setFont(new Font("Calibri", Font.PLAIN, 14));
+		e2.setBounds(336, 345, 46, 23);
+		contentPane.add(e2);
+		
+		JRadioButton e3 = new JRadioButton("3");
+		e3.setFont(new Font("Calibri", Font.PLAIN, 14));
+		e3.setBounds(394, 345, 46, 23);
+		contentPane.add(e3);
+		
+		JRadioButton e4 = new JRadioButton("4");
+		e4.setFont(new Font("Calibri", Font.PLAIN, 14));
+		e4.setBounds(452, 345, 46, 23);
+		contentPane.add(e4);
+		
+		JRadioButton f1 = new JRadioButton("1");
+		f1.setFont(new Font("Calibri", Font.PLAIN, 14));
+		f1.setBounds(278, 406, 46, 23);
+		contentPane.add(f1);
+		
+		JRadioButton f2 = new JRadioButton("2");
+		f2.setFont(new Font("Calibri", Font.PLAIN, 14));
+		f2.setBounds(336, 406, 46, 23);
+		contentPane.add(f2);
+		
+		JRadioButton f3 = new JRadioButton("3");
+		f3.setFont(new Font("Calibri", Font.PLAIN, 14));
+		f3.setBounds(394, 406, 46, 23);
+		contentPane.add(f3);
+		
+		JRadioButton f4 = new JRadioButton("4");
+		f4.setFont(new Font("Calibri", Font.PLAIN, 14));
+		f4.setBounds(452, 406, 46, 23);
+		contentPane.add(f4);
+		
+		JRadioButton g1 = new JRadioButton("1");
+		g1.setFont(new Font("Calibri", Font.PLAIN, 14));
+		g1.setBounds(278, 467, 46, 23);
+		contentPane.add(g1);
+		
+		JRadioButton g2 = new JRadioButton("2");
+		g2.setFont(new Font("Calibri", Font.PLAIN, 14));
+		g2.setBounds(336, 467, 46, 23);
+		contentPane.add(g2);
+		
+		JRadioButton g3 = new JRadioButton("3");
+		g3.setFont(new Font("Calibri", Font.PLAIN, 14));
+		g3.setBounds(394, 467, 46, 23);
+		contentPane.add(g3);
+		
+		JRadioButton g4 = new JRadioButton("4");
+		g4.setFont(new Font("Calibri", Font.PLAIN, 14));
+		g4.setBounds(452, 467, 46, 23);
+		contentPane.add(g4);
+		
+		JRadioButton h1 = new JRadioButton("1");
+		h1.setFont(new Font("Calibri", Font.PLAIN, 14));
+		h1.setBounds(278, 528, 46, 23);
+		contentPane.add(h1);
+		
+		JRadioButton h2 = new JRadioButton("2");
+		h2.setFont(new Font("Calibri", Font.PLAIN, 14));
+		h2.setBounds(336, 528, 46, 23);
+		contentPane.add(h2);
+		
+		JRadioButton h3 = new JRadioButton("3");
+		h3.setFont(new Font("Calibri", Font.PLAIN, 14));
+		h3.setBounds(394, 528, 46, 23);
+		contentPane.add(h3);
+		
+		JRadioButton h4 = new JRadioButton("4");
+		h4.setFont(new Font("Calibri", Font.PLAIN, 14));
+		h4.setBounds(452, 528, 46, 23);
+		contentPane.add(h4);
 	}
 }
