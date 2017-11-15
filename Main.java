@@ -90,7 +90,7 @@ public class Main {
 		frame.getContentPane().add(UsuarioTF);
 		UsuarioTF.setColumns(10);
 
-		JLabel lblContrasea = new JLabel("Contraseña:");
+		JLabel lblContrasea = new JLabel("Contrase\u00f1a:");
 		lblContrasea.setFont(new Font("Calibri", Font.PLAIN, 14));
 		lblContrasea.setBounds(134, 150, 135, 16);
 		frame.getContentPane().add(lblContrasea);
@@ -133,17 +133,23 @@ public class Main {
 			public void actionPerformed(ActionEvent arg0) {
 				//Si en este caso, el usuario no ingresa nada en el text field aparecera un error
 				if(UsuarioTF.getText().equals("") || PasswordTF.getPassword().toString().equals("")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario y/o  contrase�a");
+					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario y/o contrase\u00f1a");
 					
 					}
-				else if(PasswordTF.getPassword().toString().equals("")) {
-				JOptionPane.showMessageDialog(null, "Debe ingresar su nombre contrase�a");
-			}
+				else if (PasswordTF.getPassword().toString().equals("")) {
+				JOptionPane.showMessageDialog(null, "Debe ingresar su contrase\u00f1a");
+					}
 				
 				
-				
-				
-	
+				/**
+				 * verificacion de un usuario ya existente 
+				 */
+				Manager nuevoM = new Manager();
+				Usuario nuevoU = new Usuario(UsuarioTF.getText(), PasswordTF.getPassword().toString(), null, null, null, 0, 0, 0);
+				if (nuevoM.verificarUser(nuevoU) == true) {
+					JOptionPane.showMessageDialog(null, "Nombre de usuario y/o contrase\u00f1a no existentes. Cree una cuenta");
+				}
+
 			}
 		});
 		

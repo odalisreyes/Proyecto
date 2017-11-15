@@ -62,7 +62,6 @@ public class Manager {
 	 */
 	public void crearUser(String user, String password, String nombre, String apellido, String tarjeta, int cvv,
 			int mes, int ano) {
-
 		Usuario bang = new Usuario(user, password, nombre, apellido, tarjeta, cvv, mes, ano);
 		based.save(bang);
 	}
@@ -91,7 +90,7 @@ public class Manager {
 		 * usuario ya existe o no
 		 */
 		for (Usuario k : this.usuario) {
-			if (usuario.getUser().equals(k.getUser())) {
+			if (usuario.getUser().equals(k.getUser()) && usuario.getPassword().equals(k.getPassword())) {
 				ask = true;
 			} }
 

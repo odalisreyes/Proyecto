@@ -7,7 +7,6 @@ import org.mongodb.morphia.annotations.Id;
  * datos del vehículo que usa el usuario. Se creó el constructor, junto con los
  * getters y setters de cada atributo.
  * 
- * @author odalisreyes
  * @author Mayra Silva 17276
  * @author Odalis Reyes 17032
  * @author Ivan Maldonado 17211

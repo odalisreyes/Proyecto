@@ -1,4 +1,14 @@
 
+
+/**
+ * 
+ * @author Mayra Silva    17276
+ * @author Odalis Reyes   17032
+ * @author Ivan Maldonado 17211
+ * 
+ * @file Localidades.java
+ * @since 12/11/17
+ */
 public class Localidades {
     /*
      * Declaración del atributo comida (se especifica el tamaño de la matriz)
@@ -30,7 +40,7 @@ public class Localidades {
         //Zona 5
         this.localidad [0][5] = "McDonald's Zona 5 Diagonal 14 22-27 zona 5";
         //Zona 6
-        this.localidad [0][6] = "McDonald's Calle Martí Calle Marti� 14-23 zona 6";
+        this.localidad [0][6] = "McDonald's Calle Martí Calle Marti� 14-23 zona 6";
         //Zona 7
         this.localidad [0][7] = "McDonald's Roosevelt-Sn Juan Calzada San Juan 8-89 zona 7";
         //Zona 9

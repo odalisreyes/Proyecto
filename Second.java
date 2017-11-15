@@ -199,22 +199,22 @@ public class Second extends JFrame {
 					JOptionPane.showMessageDialog(null, "Debe ingresar un apellido");
 				}
 				if(pssTF.equals("")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar una contrasena");
+					JOptionPane.showMessageDialog(null, "Debe ingresar una contrase\u00f1a");
 				}
 				if(usernameTF.getText().equals("")) {
 					JOptionPane.showMessageDialog(null, "Debe ingresar un nombre de usuario");
 				}
 				if(numTarTF.equals("")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar un numero de tarjeta");
+					JOptionPane.showMessageDialog(null, "Debe ingresar un n\u00famero de tarjeta");
 				}
 				if(cvvTF.getText().equals("")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar un numero de CVV");
+					JOptionPane.showMessageDialog(null, "Debe ingresar un n\u00famero de CVV");
 				}
 				if(mesCB.getSelectedIndex() == 0) {
-					JOptionPane.showMessageDialog(null, "«- Mes -» no es una opcion valida. Eliga un mes correcto");
+					JOptionPane.showMessageDialog(null, "«- Mes -» no es una opci\u00f3n v\u00e1lida. Eliga un mes correcto");
 				}
 				if(anoCB.getSelectedIndex() == 0) {
-					JOptionPane.showMessageDialog(null, "«- A\u00f1o -» no es una opcion valida. Eliga un a\u00f1o correcto");
+					JOptionPane.showMessageDialog(null, "«- A\u00f1o -» no es una opci\u00f3n v\u00e1lida. Eliga un a\u00f1o correcto");
 				}
 
 				
@@ -222,14 +222,17 @@ public class Second extends JFrame {
 					JOptionPane.showMessageDialog(null, "Debe ingresar solo letras");
 				}
 				
-				String numeroTarjeta=String.valueOf(numTarTF);
+				/**
+				 * String numeroTarjeta=String.valueOf(numTarTF);
 				if(error.verificarInt(numeroTarjeta)==false) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar solo numeros");
+					JOptionPane.showMessageDialog(null, "Debe ingresar solo n\u00fameros");
 				}
+				 */
 				
 				
 				
-
+				
+				/* toda la informacion se mete a la base de datos */ 
 				x.crearUser(usernameTF.getText(), pssTF.getPassword().toString(), nombreTF.getText(), apellidoTF.getText(), numTarTF.getPassword().toString(), Integer.parseInt(cvvTF.getText()), mesCB.getSelectedIndex(), anoCB.getSelectedIndex());
 				
 				/* regresa al main */

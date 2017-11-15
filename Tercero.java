@@ -10,6 +10,8 @@ import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JButton;
 import javax.swing.DefaultComboBoxModel;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class Tercero extends JFrame {
 
@@ -56,10 +58,10 @@ public class Tercero extends JFrame {
 		restaurante.setBounds(132, 119, 172, 27);
 		contentPane.add(restaurante);
 		
-		JButton btnListo = new JButton("Continuar");
-		btnListo.setFont(new Font("Calibri", Font.PLAIN, 14));
-		btnListo.setBounds(162, 177, 117, 29);
-		contentPane.add(btnListo);
+		JButton continuar = new JButton("Continuar");
+		continuar.setFont(new Font("Calibri", Font.PLAIN, 14));
+		continuar.setBounds(162, 177, 117, 29);
+		contentPane.add(continuar);
 		
 		JLabel iOrder = new JLabel("iOrder");
 		iOrder.setHorizontalAlignment(SwingConstants.CENTER);
@@ -67,6 +69,14 @@ public class Tercero extends JFrame {
 		iOrder.setBounds(6, 38, 438, 26);
 		contentPane.add(iOrder);
 		
+		
+		continuar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				Dominos dominos = new Dominos();
+				dominos.setVisible(true);
+			}
+		});
 		
 	}
 }
