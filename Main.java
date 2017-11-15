@@ -133,12 +133,14 @@ public class Main {
 			public void actionPerformed(ActionEvent arg0) {
 				//Si en este caso, el usuario no ingresa nada en el text field aparecera un error
 				if(UsuarioTF.getText().equals("") || PasswordTF.getPassword().toString().equals("")) {
-					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario y/o  contraseña");
+					JOptionPane.showMessageDialog(null, "Debe ingresar su nombre de usuario y/o  contraseï¿½a");
 					
 					}
 				else if(PasswordTF.getPassword().toString().equals("")) {
-				JOptionPane.showMessageDialog(null, "Debe ingresar su nombre contraseña");
+				JOptionPane.showMessageDialog(null, "Debe ingresar su nombre contraseï¿½a");
 			}
+				
+				
 				
 				
 	
