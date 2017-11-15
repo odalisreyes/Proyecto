@@ -27,7 +27,7 @@ public class Manager {
 	public Manager() {
 		/* Constructor del ArrayList */
 		usuario = new ArrayList<Usuario>();
-		
+
 		MongoClient mongo = new MongoClient();
 		Morphia morphia = new Morphia();
 
@@ -73,8 +73,9 @@ public class Manager {
 	 *            un parametro de tipo usuario
 	 * @return ask tipo boolean
 	 */
-	public boolean verificarUser(Usuario usuario) {
+	public boolean verificarUser(String user) {
 		boolean ask = false;
+		this.usuario = new ArrayList<Usuario>();
 		/* Se crea un query con la clase de Usuario */
 		Query<Usuario> query = based.createQuery(Usuario.class);
 		/* se crea una lista usando query */
@@ -83,17 +84,46 @@ public class Manager {
 		/* se recorre la lista de tipo usuario y esta se agrega a un ArrayList */
 		for (Usuario i : lista) {
 			this.usuario.add(cuenta, i);
-			cuenta++; 	}
+			cuenta++;
+		}
 
 		/*
 		 * se recorre nuevamente la lista pero usando el array para verificar si el
 		 * usuario ya existe o no
 		 */
 		for (Usuario k : this.usuario) {
-			if (usuario.getUser().equals(k.getUser()) && usuario.getPassword().equals(k.getPassword())) {
+			if (user.equals(k.getUser())) {
 				ask = true;
-			} }
+			
+			}
+		}
 
-		return ask; }
+		return ask;
+	}
+	
+	
+	public boolean verificarMain(String user, String password) {
+		boolean hey =  false;
+		/* Se crea un query con la clase de Usuario */
+		Query<Usuario> query = based.createQuery(Usuario.class);
+		/* se crea una lista usando query */
+		List<Usuario> lista = query.asList();
+		int cuenta = 0;
+		/* se recorre la lista de tipo usuario y esta se agrega a un ArrayList */
+		for (Usuario i : lista) {
+			this.usuario.add(cuenta, i);
+			cuenta++;
+		}
+		
+		for (Usuario h : this.usuario) {
+			System.out.println(password + h.getPassword());
+			if (user.equals(h.getUser()) && password.equals(h.getPassword())) {
+				hey = true;
+			}
+		}
+		
+		return hey;
+		
+	}
 
 }

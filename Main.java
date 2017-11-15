@@ -144,10 +144,12 @@ public class Main {
 				/**
 				 * verificacion de un usuario ya existente 
 				 */
-				Manager nuevoM = new Manager();
-				Usuario nuevoU = new Usuario(UsuarioTF.getText(), PasswordTF.getPassword().toString(), null, null, null, 0, 0, 0);
-				if (nuevoM.verificarUser(nuevoU) == true) {
-					JOptionPane.showMessageDialog(null, "Nombre de usuario y/o contrase\u00f1a no existentes. Cree una cuenta");
+				if (controlador1.verificarMain(UsuarioTF.getText(), new String(PasswordTF.getPassword())) == false) {
+					JOptionPane.showMessageDialog(null, "El nombre de usuario y/o contrase\u00f1a es incorrecto. Por favor, intentelo de nuevo");
+				}
+				else if (controlador1.verificarMain(UsuarioTF.getText(), new String(PasswordTF.getPassword())) == true){
+					Tercero ventana = new Tercero();
+					ventana.setVisible(true);
 				}
 
 			}

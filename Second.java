@@ -232,11 +232,23 @@ public class Second extends JFrame {
 				
 				
 				
-				/* toda la informacion se mete a la base de datos */ 
-				x.crearUser(usernameTF.getText(), pssTF.getPassword().toString(), nombreTF.getText(), apellidoTF.getText(), numTarTF.getPassword().toString(), Integer.parseInt(cvvTF.getText()), mesCB.getSelectedIndex(), anoCB.getSelectedIndex());
+			
 				
-				/* regresa al main */
-				setVisible(false);
+				
+				/**
+				 * verificacion de un usuario ya existente 
+				 */
+				Manager nuevoM = new Manager();
+				if (nuevoM.verificarUser(usernameTF.getText()) == true) {
+					JOptionPane.showMessageDialog(null, "Nombre de usuario ya existente. Cree un nuevo usuario");
+					
+				}
+				else if (nuevoM.verificarUser(usernameTF.getText()) == false){
+					nuevoM.crearUser(usernameTF.getText(), new String(pssTF.getPassword()), nombreTF.getText(), apellidoTF.getText(), numTarTF.getPassword().toString(), Integer.parseInt(cvvTF.getText()), mesCB.getSelectedIndex(), anoCB.getSelectedIndex());
+					/* regresa al main */
+					setVisible(false);
+				}
+				
 				
 			}
 		});
