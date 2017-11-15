@@ -76,6 +76,7 @@ public class Tercero extends JFrame {
 				Dominos dominos = new Dominos();
 				dominos.setVisible(true);
 			}
+			
 		});
 		
 	}

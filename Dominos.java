@@ -316,11 +316,7 @@ public class Dominos extends JFrame {
 		h4.setBounds(452, 528, 46, 23);
 		contentPane.add(h4);
 		
-		if (especialCB.getSelectedIndex() == 0) {
-			JOptionPane.showMessageDialog(null, "«La primera opci\\u00f3n de la especialidad no es v\\u00e1lida.");
-		}
-		else if (especialCB.getSelectedIndex() == 1) {
-		}
+	
 		
 		
 	}
