@@ -231,8 +231,7 @@ public class Second extends JFrame {
 					JOptionPane.showMessageDialog(null, "Debe ingresar solo letras");
 				}
 				
-<<<<<<< Updated upstream
-=======
+
 				/*
 				 * error para String nombre
 				 */
@@ -251,8 +250,6 @@ public class Second extends JFrame {
 					JOptionPane.showMessageDialog(null, mensaje);
 				}
 				
-				
->>>>>>> Stashed changes
 				/**
 				 * String numeroTarjeta=String.valueOf(numTarTF);
 				if(error.verificarInt(numeroTarjeta)==false) {
