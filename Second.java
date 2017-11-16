@@ -227,6 +227,8 @@ public class Second extends JFrame {
 					JOptionPane.showMessageDialog(null, "Debe ingresar solo letras");
 				}
 				
+				
+				
 				/**
 				 * String numeroTarjeta=String.valueOf(numTarTF);
 				if(error.verificarInt(numeroTarjeta)==false) {

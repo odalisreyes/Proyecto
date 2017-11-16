@@ -14,16 +14,15 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 /**
- * Esta clase tiene como principal objetivo guardar los datos del usuario. 
- * Se creó el constructor, junto con los getters y setters de cada atributo 
- * (no contiene métodos ni toString). En esta clase se crea el @Entity para
- * hacer la conexión con la base de datos. 
+ * Es una interfaz gráfica que simplemente sirve para darle la opción al usuario
+ * para que elija un restaurante. En la clase se usa el JFrame, JPanel, JLabel,
+ * JComboBox y JButton.
  * 
  * @author Mayra Silva 17276
  * @author Odalis Reyes 17032
  * @author quiebres
  *
- *@since 12/11/2017
+ * @since 12/11/2017
  */
 public class Tercero extends JFrame {
 
@@ -56,40 +55,38 @@ public class Tercero extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		
+
 		JLabel lblNewLabel = new JLabel("Esoge un restaurante");
 		lblNewLabel.setFont(new Font("Calibri", Font.PLAIN, 14));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(143, 98, 161, 16);
 		contentPane.add(lblNewLabel);
-		
+
 		JComboBox restaurante = new JComboBox();
 		restaurante.setFont(new Font("Calibri", Font.PLAIN, 14));
-		restaurante.setModel(new DefaultComboBoxModel(new String[] {"Burger King", "McDonald’s", "Dominos Pizza"}));
+		restaurante.setModel(new DefaultComboBoxModel(new String[] { "Burger King", "McDonald’s", "Dominos Pizza" }));
 		restaurante.setBounds(132, 119, 172, 27);
 		contentPane.add(restaurante);
-		
+
 		JButton continuar = new JButton("Continuar");
 		continuar.setFont(new Font("Calibri", Font.PLAIN, 14));
 		continuar.setBounds(162, 177, 117, 29);
 		contentPane.add(continuar);
-		
+
 		JLabel iOrder = new JLabel("iOrder");
 		iOrder.setHorizontalAlignment(SwingConstants.CENTER);
 		iOrder.setFont(new Font("Calibri", Font.BOLD, 23));
 		iOrder.setBounds(6, 38, 438, 26);
 		contentPane.add(iOrder);
-		
-		
+
 		continuar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				Dominos dominos = new Dominos();
 				dominos.setVisible(true);
 			}
-			
+
 		});
-		
+
 	}
 }
