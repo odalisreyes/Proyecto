@@ -23,6 +23,7 @@ public class Manager {
 	/* atributos */
 	private Datastore based;
 	private ArrayList<Usuario> usuario;
+	Menu menu= new Menu();
 
 	public Manager() {
 		/* Constructor del ArrayList */
@@ -30,6 +31,8 @@ public class Manager {
 
 		MongoClient mongo = new MongoClient();
 		Morphia morphia = new Morphia();
+		
+		
 
 		/* Clases a guardar */
 		morphia.map(Usuario.class);
@@ -123,6 +126,86 @@ public class Manager {
 		}
 		
 		return hey;
+		
+	}
+	public ArrayList<Menu> getMenu(){
+		ArrayList<Menu> menucito = new ArrayList<Menu>();
+		Menu m=new Menu();
+		//Estas son las dos lineas de codigo que se deben replicar
+		m=new Menu("MacDonalds", "Desayuno", "Light", "Yogurt con frutas", 12);
+		menucito.add(m);
+		
+		
+		
+		
+		
+		
+		
+		
+		//esto ba de ultimo
+		return menucito;
+		
+	}
+	
+	
+	
+	
+	
+	/*
+	 * Metodo para filtrar los datos por categoria
+	 * @param menucito, categoria
+	 */
+	
+	public  ArrayList<Menu> getMenuByCategory(ArrayList<Menu> menucito, String categoria){
+		ArrayList<Menu> listaCategoria = new ArrayList<Menu>(); 
+		for(Menu m : menu) {
+			if(m.getCategoria().equals(categoria)) {
+				listaCategoria.add(m);
+			}
+		}
+		return listaCategoria;
+	}
+	/*
+	 * Metodo para filtrar los datos por tipo de comida
+	 * @param menucito, categoria
+	 * @return: arraylist de objetos de tipo menu
+	 */
+	
+	public  ArrayList<Menu> getMenuByType(ArrayList<Menu> menucito, String tipo){
+		ArrayList<Menu> listaTipo = new ArrayList<Menu>(); 
+		for(Menu m : menu) {
+			if(m.getTipo().equals(tipo)) {
+				listaTipo.add(m);
+			}
+		}
+		return listaTipo;
+	}
+	/*
+	 * Metodo para obtener un string de las comidas para luego setear en ellas
+	 */
+
+	public String[] getMenuByFood (ArrayList<Menu> menucito) {
+		String[] tipos = new String[]{""};
+		for (int i = 0; i < menucito.size(); i++) {
+			Menu m = menucito.get(i);
+			tipos[i] = m.getComida();
+		}
+		return tipos;
+	}
+	
+	
+	
+	
+	public int PrecioTotal (ArrayList<Menu> menucito, int index, int cantidad) {
+		int total= 0;
+		
+		total= menucito.get(index).getPrecio();
+		if(cantidad!=0) {
+			total=total*cantidad;
+		} else {
+			total=total;
+		}
+		return total;
 		
 	}
 
