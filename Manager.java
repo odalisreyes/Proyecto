@@ -170,6 +170,9 @@ public class Manager {
 		m = new Menu("MacDonalds", "Desayuno", "mid", "McGriddle de Salchicha", 25);
 		menu.add(m);
 		m = new Menu("MacDonalds", "Desayuno", "Light", "Hash Brown", 5);
+		/*
+		 * ALMUERZO
+		 */
 		menu.add(m);
 		m = new Menu("MacDonalds", "Almuerzo", "Refa", "Derretido con Jamón", 10);
 		menu.add(m);
@@ -241,6 +244,9 @@ public class Manager {
 		menu.add(m);
 		m = new Menu("MacDonalds", "Almuerzo", "kid", "Cajita Feliz Pollo Frito McCrispy", 25);
 		menu.add(m);
+		/*
+		 * ALMUERZO, POSTRES
+		 */
 		m = new Menu("MacDonalds", "Almuerzo", "postre", "Pastel de Manzana", 12);
 		menu.add(m);
 		m = new Menu("MacDonalds", "Almuerzo", "postre", "Pastel de Piña", 12);
@@ -263,6 +269,9 @@ public class Manager {
 		menu.add(m);
 		m = new Menu("MacDonalds", "Almuerzo", "postre", "McCono Mixto", 8);
 		menu.add(m);
+		/*
+		 * ALMUERZO, ENSALADA
+		 */
 		m = new Menu("MacDonalds", "Almuerzo", "Ensalada", "Ensalada de Atún", 20);
 		menu.add(m);
 		m = new Menu("MacDonalds", "Almuerzo", "Ensalada", "Ensalada de Pollo Grill", 25);
@@ -271,6 +280,9 @@ public class Manager {
 		menu.add(m);
 		m = new Menu("MacDonalds", "Almuerzo", "Ensalada", "Side Salad", 15);
 		menu.add(m);
+		/*
+		 * ALMUERZO, BEBIDAS
+		 */
 		m = new Menu("MacDonalds", "Bebidas", "fria", "Té Lipton Limón", 9);
 		menu.add(m);
 		m = new Menu("MacDonalds", "Bebidas", "caliente", "Caf\u00e9", 9);
