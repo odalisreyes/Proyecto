@@ -39,8 +39,10 @@ public class Second extends JFrame {
 	private JPasswordField pssTF;
 	
 	
+	
 	//Declaracion de variables globales.
 	Errores error;
+	String mensaje;
 
 	/**
 	 * Launch the application.
@@ -144,6 +146,7 @@ public class Second extends JFrame {
 		apellidoTF.setColumns(10);
 		
 		
+		
 		/* Nombre de usuario TextField */
 		usernameTF = new JTextField();
 		usernameTF.setFont(new Font("Calibri", Font.PLAIN, 14));
@@ -157,6 +160,7 @@ public class Second extends JFrame {
 		cvvTF.setBounds(234, 293, 153, 26);
 		contentPane.add(cvvTF);
 		cvvTF.setColumns(10);
+		
 		
 		/* Contrasena TextField */
 		pssTF = new JPasswordField();
@@ -227,6 +231,28 @@ public class Second extends JFrame {
 					JOptionPane.showMessageDialog(null, "Debe ingresar solo letras");
 				}
 				
+<<<<<<< Updated upstream
+=======
+				/*
+				 * error para String nombre
+				 */
+				
+				if(error.verificarString(nombreTF.getText())==false) {
+					mensaje = "¡Debe de ingresar solamente letras!" + "\n" + "Ingrese los datos nuevamente.";
+					JOptionPane.showMessageDialog(null, mensaje);
+				}
+				
+				/*
+				 * error para String apellido
+				 */
+				
+				if(error.verificarString(apellidoTF.getText())==false) {
+					mensaje = "¡Debe de ingresar solamente letras!" + "\n" + "Ingrese los datos nuevamente.";
+					JOptionPane.showMessageDialog(null, mensaje);
+				}
+				
+				
+>>>>>>> Stashed changes
 				/**
 				 * String numeroTarjeta=String.valueOf(numTarTF);
 				if(error.verificarInt(numeroTarjeta)==false) {
