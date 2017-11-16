@@ -148,7 +148,7 @@ public class Main {
 					JOptionPane.showMessageDialog(null, "El nombre de usuario y/o contrase\u00f1a es incorrecto. Por favor, intentelo de nuevo");
 				}
 				else if (controlador1.verificarMain(UsuarioTF.getText(), new String(PasswordTF.getPassword())) == true){
-					Tercero ventana = new Tercero();
+					Pedido ventana = new Pedido();
 					ventana.setVisible(true);
 				}
 
