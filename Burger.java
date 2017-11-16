@@ -10,6 +10,8 @@ import javax.swing.SwingConstants;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JComboBox;
 
+/**
+ */
 public class Burger extends JFrame {
 
 	private JPanel contentPane;
@@ -149,5 +151,11 @@ public class Burger extends JFrame {
 		comboBox_7.setModel(new DefaultComboBoxModel(new String [] {"- Escoge una opci\u00f3n -", "Quesoburguesa",
 				"4 BK® Nuggets", "Derretido", "HAMBURGEUSA"}));
 		contentPane.add(comboBox_7);
+		
+		JLabel lblCantidad = new JLabel("Cantidad");
+		lblCantidad.setHorizontalAlignment(SwingConstants.CENTER);
+		lblCantidad.setFont(new Font("Calibri", Font.PLAIN, 14));
+		lblCantidad.setBounds(278, 83, 212, 16);
+		contentPane.add(lblCantidad);
 	}
 }

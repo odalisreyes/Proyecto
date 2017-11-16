@@ -13,6 +13,18 @@ import javax.swing.DefaultComboBoxModel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * Esta clase tiene como principal objetivo guardar los datos del usuario. 
+ * Se creó el constructor, junto con los getters y setters de cada atributo 
+ * (no contiene métodos ni toString). En esta clase se crea el @Entity para
+ * hacer la conexión con la base de datos. 
+ * 
+ * @author Mayra Silva 17276
+ * @author Odalis Reyes 17032
+ * @author quiebres
+ *
+ *@since 12/11/2017
+ */
 public class Tercero extends JFrame {
 
 	private JPanel contentPane;
