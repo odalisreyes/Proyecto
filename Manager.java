@@ -132,6 +132,7 @@ public class Manager {
 		
 	}
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 	/**
 	 * 
@@ -548,6 +549,8 @@ public class Manager {
 
 		// esto ba de ultimo
 =======
+=======
+>>>>>>> master
 	public ArrayList<Menu> getMenu(){
 		Menu m=new Menu();
 		//Estas son las dos lineas de codigo que se deben replicar
@@ -562,6 +565,9 @@ public class Manager {
 		
 		
 		//esto ba de ultimo
+<<<<<<< HEAD
+>>>>>>> master
+=======
 >>>>>>> master
 		return menu;
 		
