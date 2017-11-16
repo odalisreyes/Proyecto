@@ -84,12 +84,26 @@ public class Tercero extends JFrame {
 		
 		continuar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				int indice=0;
+				Restaurantes restaurantes=new Restaurantes();
+				restaurantes.setVisible(true);
+				switch(restaurante.getSelectedIndex()) {
+				case 0:
+					indice=0;
+					restaurantes.setIndice(indice);
+					break;
+				case 1: 
+					indice=1;
+					restaurantes.setIndice(indice);
+					break;
+				case 2: 
+					indice=2;
+					restaurantes.setIndice(indice);
+					break;
 				
-				Dominos dominos = new Dominos();
-				dominos.setVisible(true);
 			}
-			
+			}
 		});
-		
 	}
+	
 }
