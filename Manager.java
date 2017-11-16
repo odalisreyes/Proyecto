@@ -23,7 +23,10 @@ public class Manager {
 	/* atributos */
 	private Datastore based;
 	private ArrayList<Usuario> usuario;
-	ArrayList<Menu> menu = new ArrayList<Menu>();
+	private ArrayList<Menu> menu= new ArrayList<Menu>();
+	Localidades localidades = new Localidades();
+	
+	
 
 	public Manager() {
 		/* Constructor del ArrayList */
@@ -31,6 +34,8 @@ public class Manager {
 
 		MongoClient mongo = new MongoClient();
 		Morphia morphia = new Morphia();
+		
+		
 
 		/* Clases a guardar */
 		morphia.map(Usuario.class);
@@ -95,15 +100,16 @@ public class Manager {
 		for (Usuario k : this.usuario) {
 			if (user.equals(k.getUser())) {
 				ask = true;
-
+			
 			}
 		}
 
 		return ask;
 	}
-
+	
+	
 	public boolean verificarMain(String user, String password) {
-		boolean hey = false;
+		boolean hey =  false;
 		/* Se crea un query con la clase de Usuario */
 		Query<Usuario> query = based.createQuery(Usuario.class);
 		/* se crea una lista usando query */
@@ -114,17 +120,18 @@ public class Manager {
 			this.usuario.add(cuenta, i);
 			cuenta++;
 		}
-
+		
 		for (Usuario h : this.usuario) {
 			System.out.println(password + h.getPassword());
 			if (user.equals(h.getUser()) && password.equals(h.getPassword())) {
 				hey = true;
 			}
 		}
-
+		
 		return hey;
-
+		
 	}
+<<<<<<< HEAD
 
 	/**
 	 * 
@@ -540,85 +547,93 @@ public class Manager {
 		menu.add(m);
 
 		// esto ba de ultimo
+=======
+	public ArrayList<Menu> getMenu(){
+		Menu m=new Menu();
+		//Estas son las dos lineas de codigo que se deben replicar
+		m=new Menu("MacDonalds", "Desayuno", "Light", "Yogurt con frutas", 12);
+		menu.add(m);
+		
+		
+		
+		
+		
+		
+		
+		
+		//esto ba de ultimo
+>>>>>>> master
 		return menu;
-
+		
 	}
-
-	/**
+	
+	
+	
+	
+	
+	/*
 	 * Metodo para filtrar los datos por categoria
-	 * 
-	 * @param menucito
-	 *            arreglo de todo el menu
-	 * @param categoria
-	 *            categoria de la comida
-	 * @return lista de la categoria
+	 * @param menucito, categoria
 	 */
-	public ArrayList<Menu> getMenuByCategory(ArrayList<Menu> menucito, String categoria) {
-		ArrayList<Menu> listaCategoria = new ArrayList<Menu>();
-		for (Menu m : menu) {
-			if (m.getCategoria().equals(categoria)) {
+	
+	public  ArrayList<Menu> getMenuByCategory(ArrayList<Menu> menucito, String categoria){
+		ArrayList<Menu> listaCategoria = new ArrayList<Menu>(); 
+		for(Menu m : menu) {
+			if(m.getCategoria().equals(categoria)) {
 				listaCategoria.add(m);
 			}
 		}
 		return listaCategoria;
 	}
-
-	/**
-	 * Metodo para obtener un string de las comidas para luego setear en ellas
-	 * 
-	 * @param menucito
-	 *            arreglo de todo el menu
-	 * @param tipo
-	 *            categoria en la que esta el menu
-	 * @return listaTipo
+	/*
+	 * Metodo para filtrar los datos por tipo de comida
+	 * @param menucito, categoria
+	 * @return: arraylist de objetos de tipo menu
 	 */
-	public ArrayList<Menu> getMenuByType(ArrayList<Menu> menucito, String tipo) {
-		ArrayList<Menu> listaTipo = new ArrayList<Menu>();
-		for (Menu m : menu) {
-			if (m.getTipo().equals(tipo)) {
+	
+	public  ArrayList<Menu> getMenuByType(ArrayList<Menu> menucito, String tipo){
+		ArrayList<Menu> listaTipo = new ArrayList<Menu>(); 
+		for(Menu m : menu) {
+			if(m.getTipo().equals(tipo)) {
 				listaTipo.add(m);
 			}
 		}
 		return listaTipo;
 	}
-
-	/**
+	/*
 	 * Metodo para obtener un string de las comidas para luego setear en ellas
-	 * 
-	 * @param menucito
-	 *            arreglo de todo el menu
-	 * @return tipos
 	 */
-	public String[] getMenuByFood(ArrayList<Menu> menucito) {
-		String[] tipos = new String[] { "" };
+
+	public String[] getMenuByFood (ArrayList<Menu> menucito) {
+		String[] tipos = new String[]{""};
 		for (int i = 0; i < menucito.size(); i++) {
 			Menu m = menucito.get(i);
 			tipos[i] = m.getComida();
 		}
 		return tipos;
 	}
-
-	/**
-	 * 
-	 * @param menucito
-	 *            arreglo de todo el menu
-	 * @param index
-	 *            numero de indice
-	 * @param cantidad
-	 *            precio de la comida
-	 * @return total
+	
+	/*
+	 * Metodo para obtener el precio total de la orden
+	 * @param: menucito, index, cantidad
 	 */
-	public int PrecioTotal(ArrayList<Menu> menucito, int index, int cantidad) {
-		int total = 0;
-
-		total = menucito.get(index).getPrecio();
-		if (cantidad != 0) {
-			total = total * cantidad;
+	
+	
+	public int PrecioTotal (ArrayList<Menu> menucito, int index, int cantidad) {
+		int total= 0;
+		
+		total= menucito.get(index).getPrecio();
+		if(cantidad!=0) {
+			total=total*cantidad;
 		} else {
-			total = total;
+			total=total;
 		}
 		return total;
-
+		
 	}
+	
+	
+	
+	
 
 }
