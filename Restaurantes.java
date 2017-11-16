@@ -231,9 +231,9 @@ public class Restaurantes extends JFrame {
 		spinnerPostre.setBounds(220, 36, 42, 26);
 		panel_1.add(spinnerPostre);
 		
-		JButton btnEnviarOrden_1 = new JButton("Enviar orden");
-		btnEnviarOrden_1.setFont(new Font("Calibri", Font.PLAIN, 14));
-		btnEnviarOrden_1.setBounds(297, 36, 105, 29);
-		panel_1.add(btnEnviarOrden_1);
+		JButton orden3 = new JButton("Enviar orden");
+		orden3.setFont(new Font("Calibri", Font.PLAIN, 14));
+		orden3.setBounds(297, 36, 105, 29);
+		panel_1.add(orden3);
 	}
 }
