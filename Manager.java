@@ -23,7 +23,8 @@ public class Manager {
 	/* atributos */
 	private Datastore based;
 	private ArrayList<Usuario> usuario;
-	Menu menu= new Menu();
+	ArrayList<Menu> menu= new ArrayList<Menu>();
+	
 
 	public Manager() {
 		/* Constructor del ArrayList */
@@ -129,11 +130,10 @@ public class Manager {
 		
 	}
 	public ArrayList<Menu> getMenu(){
-		ArrayList<Menu> menucito = new ArrayList<Menu>();
 		Menu m=new Menu();
 		//Estas son las dos lineas de codigo que se deben replicar
 		m=new Menu("MacDonalds", "Desayuno", "Light", "Yogurt con frutas", 12);
-		menucito.add(m);
+		menu.add(m);
 		
 		
 		
@@ -143,7 +143,7 @@ public class Manager {
 		
 		
 		//esto ba de ultimo
-		return menucito;
+		return menu;
 		
 	}
 	
