@@ -450,6 +450,94 @@ public class Manager {
 		/**
 		 * DOMINOS PIZZA
 		 */
+		/* Pizzas */
+		m = new Menu("Dominos Pizza", "Pizza", "espe", "5 Carnes", 46);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Pizza", "espe", "Hawaiana", 46);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Pizza", "espe", "Americana", 46);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Pizza", "espe", "Deluxe", 46);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Pizza", "espe", "Margarita", 46);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Pizza", "espe", "Veggy", 46);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Pizza", "premium", "Carne y Tocino", 49);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Pizza", "premium", "Extravaganza", 49);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Pizza", "premium", "Churrazco", 49);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Pizza", "uno", "Carne Molida", 42);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Pizza", "uno", "Salami", 113);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Pizza", "uno", "Pepperoni", 113);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Pizza", "uno", "Jamon", 42);
+		menu.add(m);
+
+		/* Extras */
+		m = new Menu("Dominos Pizza", "Extras", "don", "Don Calzzone Pollo Chipotle", 32);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "don", "Don Calzzone Tex-Mex", 32);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "don", "Don Calzzone Deluxe", 32);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "don", "Don Calzzone Tropical", 32);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "don", "Don Calzzone BBQ", 32);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "don", "Don Calzzone Italian Chicken", 32);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "don", "Don Calzzone Di Carne", 32);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "ala", "Bucket", 125);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "ala", "Alitas", 41);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "ala", "Cheesy Bread", 26);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "otro", "Salsa Barbacoa", 5);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "otro", "Salsa Cayenne", 5);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "otro", "Dip Tropical", 3);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "otro", "Salsa Domino's", 5);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "otro", "Dulce de Leche", 3);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "otro", "Chips Lays", 0);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "bebi", "Coca Cola", 9);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "bebi", "Diet Coke", 9);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "bebi", "Sprite", 9);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "bebi", "Fanta Naranja", 9);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "bebi", "Coca Cola ZERO", 9);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "bebi", "Agua Pura", 8);
+		menu.add(m);
+
+
+		/* Postres */
+		m = new Menu("Dominos Pizza", "Extras", "pos", "Canelitas", 15);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "pos", "Brownie", 8);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "pos", "Helado Fresa", 15);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "pos", "Helado Vanilla", 15);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "pos", "Helado Chocolate", 15);
+		menu.add(m);
+		m = new Menu("Dominos Pizza", "Extras", "pos", "Don Calzzone Nutella Fresas", 20);
+		menu.add(m);
 
 		// esto ba de ultimo
 		return menu;
