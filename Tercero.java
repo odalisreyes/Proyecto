@@ -58,7 +58,7 @@ public class Tercero extends JFrame {
 		contentPane.setLayout(null);
 		
 		
-		JLabel lblNewLabel = new JLabel("Esoge un restaurante");
+		JLabel lblNewLabel = new JLabel("Elige un restaurante");
 		lblNewLabel.setFont(new Font("Calibri", Font.PLAIN, 14));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setBounds(143, 98, 161, 16);
@@ -66,7 +66,7 @@ public class Tercero extends JFrame {
 		
 		JComboBox restaurante = new JComboBox();
 		restaurante.setFont(new Font("Calibri", Font.PLAIN, 14));
-		restaurante.setModel(new DefaultComboBoxModel(new String[] {"Burger King", "McDonaldâ€™s", "Dominos Pizza"}));
+		restaurante.setModel(new DefaultComboBoxModel(new String[] {"Burger King", "McDonald´s", "Dominos Pizza"}));
 		restaurante.setBounds(132, 119, 172, 27);
 		contentPane.add(restaurante);
 		

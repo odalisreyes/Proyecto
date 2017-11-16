@@ -23,7 +23,9 @@ public class Manager {
 	/* atributos */
 	private Datastore based;
 	private ArrayList<Usuario> usuario;
-	ArrayList<Menu> menu= new ArrayList<Menu>();
+	private ArrayList<Menu> menu= new ArrayList<Menu>();
+	Localidades localidades = new Localidades();
+	
 	
 
 	public Manager() {
@@ -193,7 +195,10 @@ public class Manager {
 		return tipos;
 	}
 	
-	
+	/*
+	 * Metodo para obtener el precio total de la orden
+	 * @param: menucito, index, cantidad
+	 */
 	
 	
 	public int PrecioTotal (ArrayList<Menu> menucito, int index, int cantidad) {
@@ -208,5 +213,9 @@ public class Manager {
 		return total;
 		
 	}
+	
+	
+	
+	
 
 }
