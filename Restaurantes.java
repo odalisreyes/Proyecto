@@ -14,7 +14,17 @@ import javax.swing.JSpinner;
 import javax.swing.SpinnerNumberModel;
 import javax.swing.JButton;
 
-public class McDonalds extends JFrame {
+
+
+/**
+ * @author Mayra Silva    17276
+ * @author Odalis Reyes   17032
+ * @author Ivan Maldonado 17211
+ * 
+ * @file Restaurantes.java
+ * @since 15/11/17
+ */
+public class Restaurantes extends JFrame {
 
 	private JPanel contentPane;
 
@@ -25,7 +35,7 @@ public class McDonalds extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					McDonalds frame = new McDonalds();
+					Restaurantes frame = new Restaurantes();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -37,7 +47,7 @@ public class McDonalds extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public McDonalds() {
+	public Restaurantes() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 792, 561);
 		contentPane = new JPanel();
