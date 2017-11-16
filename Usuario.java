@@ -11,7 +11,6 @@ import org.mongodb.morphia.annotations.Id;
  * @author Odalis Reyes 17032
  * @author Ivan Maldonado 17211
  * 
- * @file Usuario.java
  * @since 20/09/17
  */
 
@@ -50,7 +49,6 @@ public class Usuario {
 	 *            mes de la fecha de expiracion de la tarjeta
 	 * @param ano
 	 *            anio del mes de la fecha de expiracion de la tarjeta
-	 * @param idUsuario
 	 */
 	public Usuario(String user, String password, String nombre, String apellido, String tarjeta, int cvv, int mes, int ano) {
 		this.user = user;

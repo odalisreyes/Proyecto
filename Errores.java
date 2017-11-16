@@ -1,6 +1,6 @@
 
 /** 
- * Esta clase tiene como objetivo crear los métodos necesarios para los posibles errores dentro del programa. 
+ * Esta clase tiene como objetivo crear los metodos necesarios para los posibles errores dentro del programa. 
  * 
  * @author Mayra Silva    17276
  * @author Odalis Reyes   17032

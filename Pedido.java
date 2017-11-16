@@ -2,6 +2,7 @@ import java.awt.EventQueue;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.ButtonGroup;
 import javax.swing.DefaultComboBoxModel;
@@ -25,19 +26,17 @@ import javax.swing.border.EmptyBorder;
  * @author Odalis Reyes 17032
  * @author Ivan Maldonado 17211
  * 
- * @file Dominos.java
  * @since 14/11/17
  */
 public class Pedido extends JFrame {
 
 	private JPanel contentPane;
 	Manager controlador = new Manager();
-	Localidades local=new Localidades();
-	
-	private JSpinner spinner;
 
 	/**
-	 * Launch the application.
+	 * 
+	 * @param args
+	 *            String de lo que se lee
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -56,7 +55,7 @@ public class Pedido extends JFrame {
 	 * Create the frame.
 	 */
 	public Pedido() {
-		controlador.getMenu();
+
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 521, 660);
 		contentPane = new JPanel();
@@ -67,7 +66,7 @@ public class Pedido extends JFrame {
 		/*
 		 * labels
 		 */
-		JLabel lbtitulo = new JLabel("Â¡Escoge tu pizza favorita!");
+		JLabel lbtitulo = new JLabel("¡Escoge tu pizza favorita!");
 		lbtitulo.setHorizontalAlignment(SwingConstants.CENTER);
 		lbtitulo.setFont(new Font("Calibri", Font.BOLD, 20));
 		lbtitulo.setBounds(6, 26, 509, 25);
@@ -82,12 +81,12 @@ public class Pedido extends JFrame {
 		lblNewLabel_1.setFont(new Font("Calibri", Font.PLAIN, 14));
 		lblNewLabel_1.setBounds(30, 144, 144, 16);
 		contentPane.add(lblNewLabel_1);
-		
+
 		JLabel lblPizzaDeUn = new JLabel("Pizza de un ingrediente");
 		lblPizzaDeUn.setFont(new Font("Calibri", Font.PLAIN, 14));
 		lblPizzaDeUn.setBounds(29, 207, 165, 16);
 		contentPane.add(lblPizzaDeUn);
-		
+
 		JLabel lblNewLabel_2 = new JLabel("Don Calzzone");
 		lblNewLabel_2.setFont(new Font("Calibri", Font.PLAIN, 14));
 		lblNewLabel_2.setBounds(30, 268, 98, 16);
@@ -98,23 +97,23 @@ public class Pedido extends JFrame {
 		 */
 		JComboBox premiumCB = new JComboBox();
 		premiumCB.setModel(new DefaultComboBoxModel(
-		new String[] { "- Escoge una pizza premium -", "Carne y Tocino", "Extravaganza", "Churrazco" }));
+				new String[] { "- Escoge una pizza premium -", "Carne y Tocino", "Extravaganza", "Churrazco" }));
 		premiumCB.setFont(new Font("Calibri", Font.PLAIN, 14));
 		premiumCB.setBounds(19, 162, 216, 27);
 		contentPane.add(premiumCB);
-		
+
 		JComboBox especialCB = new JComboBox();
 		especialCB.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+
 				especialCB.getSelectedIndex();
 				int total = especialCB.getSelectedIndex();
-				
+
 			}
 		});
 		especialCB.setFont(new Font("Calibri", Font.PLAIN, 14));
 		especialCB.setModel(new DefaultComboBoxModel(new String[] { "- Escoge una especialidad -", "5 Carnes",
-		"Hawaiana", "Americana", "Deluxe", "Margarita", "Veggy" }));
+				"Hawaiana", "Americana", "Deluxe", "Margarita", "Veggy" }));
 		especialCB.setBounds(19, 102, 216, 27);
 		contentPane.add(especialCB);
 
@@ -203,8 +202,8 @@ public class Pedido extends JFrame {
 		lblBebidas.setFont(new Font("Calibri", Font.PLAIN, 14));
 		lblBebidas.setBounds(30, 510, 61, 16);
 		contentPane.add(lblBebidas);
-		
-		ButtonGroup grupo= new ButtonGroup();
+
+		ButtonGroup grupo = new ButtonGroup();
 		grupo.add(a1);
 		grupo.add(a2);
 		grupo.add(a3);
@@ -218,40 +217,131 @@ public class Pedido extends JFrame {
 		contentPane.add(bebidaCB);
 
 		JButton comprarB = new JButton("Comprar");
-		
+
 		comprarB.setFont(new Font("Calibri", Font.PLAIN, 14));
 		comprarB.setBounds(219, 588, 117, 29);
 		contentPane.add(comprarB);
-	
 
-		
-		comprarB.addActionListener(new ActionListener() {
+		JButton btnReggeaton = new JButton("Reggeaton");
+		btnReggeaton.setVisible(false);
+
+		btnReggeaton.setFont(new Font("Calibri", Font.PLAIN, 14));
+		btnReggeaton.setBounds(323, 220, 117, 29);
+		contentPane.add(btnReggeaton);
+
+		JLabel lblEscogeTuPreferencia = new JLabel("¡Escoge tu preferencia musical!");
+		lblEscogeTuPreferencia.setFont(new Font("Calibri", Font.PLAIN, 14));
+		lblEscogeTuPreferencia.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEscogeTuPreferencia.setBounds(278, 163, 212, 16);
+		contentPane.add(lblEscogeTuPreferencia);
+		lblEscogeTuPreferencia.setVisible(false);
+
+		JButton btnRapTrap = new JButton("Rap/Trap");
+		btnRapTrap.setVisible(false);
+
+		btnRapTrap.setFont(new Font("Calibri", Font.PLAIN, 14));
+		btnRapTrap.setBounds(323, 282, 117, 29);
+		contentPane.add(btnRapTrap);
+
+		JButton btnDance = new JButton("Dance");
+		btnDance.setVisible(false);
+
+		btnDance.setFont(new Font("Calibri", Font.PLAIN, 14));
+		btnDance.setBounds(323, 341, 117, 29);
+		contentPane.add(btnDance);
+
+		JButton btnOldButGold = new JButton("Old but Gold");
+
+		btnOldButGold.setFont(new Font("Calibri", Font.PLAIN, 14));
+		btnOldButGold.setBounds(323, 402, 117, 29);
+		contentPane.add(btnOldButGold);
+		btnOldButGold.setVisible(false);
+
+		// Metodo para crear playlists
+		btnReggeaton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				int total=0;
-						
-				int rand =(int)( Math.random()*100+1);
-				if(a1.isSelected()) {
-					total=total+1;
+				try {
+					String url = "https://www.youtube.com/watch?v=QeaumjX9DNY&list=PLVGxR1yQ35DUDvmMlWvJsW0_BMoG88St4";
+					java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
-				if(a2.isSelected()) {
-					total=total+2;
+			}
+		});
+		// metodo para crear playlist de rap y trap
+
+		btnRapTrap.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					String url = "https://www.youtube.com/watch?v=QeaumjX9DNY&list=PLVGxR1yQ35DUDvmMlWvJsW0_BMoG88St4";
+					java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
-				if(a3.isSelected()) {
-					total=total+3;
+			}
+		});
+
+		// metodo para crear playlist de dance
+
+		btnDance.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					String url = "https://www.youtube.com/watch?v=C9slkeFXogU&list=PLVGxR1yQ35DXK1382TO31iaUiFGOJKlq8";
+					java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
-				if(a4.isSelected()) {
-					total=total+4;
+			}
+		});
+		// metodo para crear playlist de old but gold
+
+		btnOldButGold.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				try {
+					String url = "https://www.youtube.com/watch?v=I_izvAbhExY&list=PLVGxR1yQ35DVmKbF4fV8O8uxSKO82wWGn";
+					java.awt.Desktop.getDesktop().browse(java.net.URI.create(url));
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
-				total=total+rand;
-				
-				
-				String txt="El total de su orden es: " + total + "\n" ;
+			}
+		});
+		// metodo para crear una compra y hacer calculos
+
+		comprarB.addActionListener(new ActionListener() {
+
+			public void actionPerformed(ActionEvent e) {
+				btnReggeaton.setVisible(true);
+				btnRapTrap.setVisible(true);
+				btnDance.setVisible(true);
+				btnOldButGold.setVisible(true);
+				lblEscogeTuPreferencia.setVisible(true);
+				int total = 0;
+
+				int rand = (int) (Math.random() * 270 + 30);
+				if (a1.isSelected()) {
+					total = total + 1;
+				}
+				if (a2.isSelected()) {
+					total = total + 2;
+				}
+				if (a3.isSelected()) {
+					total = total + 3;
+				}
+				if (a4.isSelected()) {
+					total = total + 4;
+				}
+				total = total + rand;
+				// perdon carlitos ):, no nos dio tiempo
+
+				String txt = "El total de su orden es: Q" + total + ".00" + "\n";
 				JOptionPane.showMessageDialog(null, txt);
-				
+
 			}
 		});
 
 	}
-
-
 }

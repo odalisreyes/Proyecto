@@ -25,7 +25,6 @@ import java.awt.event.ActionEvent;
  * @author Odalis Reyes   17032
  * @author Ivan Maldonado 17211
  * 
- * @file Second.java
  * @since 10/11/17
  */
 public class Second extends JFrame {
@@ -250,6 +249,10 @@ public class Second extends JFrame {
 					JOptionPane.showMessageDialog(null, mensaje);
 				}
 				
+				if(error.verificarInt(cvvTF.getText())==false) {
+					mensaje = "¡Debe de ingresar solamente letras!" + "\n" + "Ingrese los datos nuevamente.";
+					JOptionPane.showMessageDialog(null, mensaje);
+				}
 				/**
 				 * String numeroTarjeta=String.valueOf(numTarTF);
 				if(error.verificarInt(numeroTarjeta)==false) {

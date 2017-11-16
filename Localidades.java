@@ -40,7 +40,7 @@ public class Localidades {
         //Zona 5
         this.localidad [0][5] = "McDonald's Zona 5 Diagonal 14 22-27 zona 5";
         //Zona 6
-        this.localidad [0][6] = "McDonald's Calle Martí Calle Marti� 14-23 zona 6";
+        this.localidad [0][6] = "McDonald's Calle Martí Calle Marti 14-23 zona 6";
         //Zona 7
         this.localidad [0][7] = "McDonald's Roosevelt-Sn Juan Calzada San Juan 8-89 zona 7";
         //Zona 9
@@ -48,13 +48,13 @@ public class Localidades {
         //Zona 10
         this.localidad [0][10] = "McDonald's Zona 10 6 Ave. 8-34 zona 10 Frente Hospitales";
         //Zona 11
-        this.localidad [0][11] = "McDonald's Utatl\\u00e1n Calzada Roosevelt Diagonal 12 31-55 zona 11 Colonia Utatlán.";
+        this.localidad [0][11] = "McDonald's Utatl\\u00e1n Calzada Roosevelt Diagonal 12 31-55 zona 11 Colonia Utatlan.";
         //Zona 12
         this.localidad [0][12] = "McDonald's Petapa Ave. Petapa 31-89 zona 12 Petapa";
         //Zona 13
         this.localidad [0][13] = "La Aurora Airport 9 Av 14-75, Zona 13";
         //Zona 14
-        this.localidad [0][14] = "McDonald's Am\u00e9ricas 10a. calle 00-25 zona 14 Ave. Las Américas";
+        this.localidad [0][14] = "McDonald's Am\u00e9ricas 10a. calle 00-25 zona 14 Ave. Las Americas";
         //Zona 15
         this.localidad [0][15] = "McDonald's Vista Hermosa Boulevard Vista Hermosa 20-88 zona 15";
         //Zona 16

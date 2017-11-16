@@ -11,11 +11,13 @@ import org.mongodb.morphia.query.Query;
  * Esta clase tiene como proposito realizar los metodos necesarios para unir la
  * base de datos con la clase Usuario e implementar los requisitos funcionales
  * 
+ * NOMBRE DE BASE DE DATOS: Proyecto
+ * NOMBRE DE LA COLECCION: iOrder
+ * 
  * @author Mayra Silva 17276
  * @author Odalis Reyes 17032
  * @author Ivan Maldonado 17211
  * 
- * @file Manager.java
  * @since 10/11/17
  */
 
@@ -63,7 +65,6 @@ public class Manager {
 	 *            mes de la fecha de expiracion de la tarjeta
 	 * @param ano
 	 *            anio del mes de la fecha de expiracion de la tarjeta
-	 * @param idUsuario
 	 */
 	public void crearUser(String user, String password, String nombre, String apellido, String tarjeta, int cvv,
 			int mes, int ano) {
@@ -74,7 +75,7 @@ public class Manager {
 	/**
 	 * Verificacion para el ingreso de un usuario ya existente
 	 * 
-	 * @param usuario
+	 * @param user
 	 *            un parametro de tipo usuario
 	 * @return ask tipo boolean
 	 */
