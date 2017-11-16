@@ -229,7 +229,7 @@ public class Matriz {
 		 * PRECIO ENSALADA
 		 */
 		this.comida [1][64] = "20";
-		this.comida [1][65] = "25l";
+		this.comida [1][65] = "25";
 		this.comida [1][66] = "25";
 		this.comida [1][67] = "15";
 		
